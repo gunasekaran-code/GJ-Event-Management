@@ -15,7 +15,7 @@ export function Header() {
     <>
       <header className="fixed top-0 left-0 right-0 z-50 glass-strong">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6 md:py-4">
-          <Link href="#home" className="flex items-center gap-3">
+          <Link href="/#home" className="flex items-center gap-3">
             <Image
               src="/logo.svg"
               alt="GJ Decoration logo"
@@ -43,13 +43,13 @@ export function Header() {
             </a>
 
             <Link
-              href="#portfolio"
+              href="/#portfolio"
               className="hidden font-serif text-sm italic text-primary lg:block"
             >
               Portfolio
             </Link>
             <Link
-              href="#contact"
+              href="/#contact"
               className="hidden font-serif text-sm italic text-primary lg:block"
             >
               Contact

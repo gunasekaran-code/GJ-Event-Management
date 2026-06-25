@@ -22,12 +22,12 @@ export const siteConfig = {
 };
 
 export const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Clients", href: "#clients" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/#home" },
+  { label: "About", href: "/#about" },
+  { label: "Services", href: "/#services" },
+  { label: "Portfolio", href: "/#portfolio" },
+  { label: "Clients", href: "/#clients" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export const services = [
@@ -341,7 +341,7 @@ export const blogPosts = [
     excerpt:
       "Blending authentic temple festival traditions with contemporary design for unforgettable celebrations.",
     image:
-      "https://images.unsplash.com/photo-1605647540924-852290f6e267?w=600&q=80",
+      "https://i.pinimg.com/736x/bb/80/7a/bb807a448bf329999ff3813a1c543bd8.jpg",
     imageAlt: "Temple festival decoration Tamil Nadu",
   },
 ];

@@ -6,6 +6,7 @@ import { Services } from "@/components/sections/Services";
 import { Portfolio } from "@/components/sections/Portfolio";
 import { BehindTheScenes } from "@/components/sections/BehindTheScenes";
 import { Testimonials } from "@/components/sections/Testimonials";
+import { VideoCTA } from "@/components/sections/VideoCTA";
 import { Reach } from "@/components/sections/Reach";
 import { BlogPreview } from "@/components/sections/BlogPreview";
 import { FAQ } from "@/components/sections/FAQ";
@@ -21,6 +22,7 @@ export default function Home() {
         <Portfolio />
         <BehindTheScenes />
         <Testimonials />
+        <VideoCTA/>
         <Reach />
         <BlogPreview />
         <FAQ />

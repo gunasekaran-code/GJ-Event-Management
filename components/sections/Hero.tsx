@@ -130,7 +130,7 @@ export function Hero() {
         <AnimatedReveal delay={0.3}>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
-              href="#contact"
+              href="/Booking"
               className="inline-flex items-center gap-2 rounded-full bg-secondary px-8 py-4 text-sm font-bold text-white transition-transform hover:scale-105"
             >
               Plan Your Event

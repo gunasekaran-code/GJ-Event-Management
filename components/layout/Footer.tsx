@@ -2,17 +2,17 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/content";
 
 const companyLinks = [
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Event Management in Thoothukudi", href: "#about" },
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Clients", href: "#clients" },
+  { label: "About", href: "/#about" },
+  { label: "Services", href: "/#services" },
+  { label: "Event Management in Thoothukudi", href: "/#about" },
+  { label: "Portfolio", href: "/#portfolio" },
+  { label: "Clients", href: "/#clients" },
 ];
 
 const resourceLinks = [
-  { label: "Blog", href: "#insights" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Testimonials", href: "#testimonials" },
+  { label: "Blog", href: "/#insights" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Testimonials", href: "/#testimonials" },
   { label: "Privacy Policy", href: "#" },
   { label: "Terms of Service", href: "#" },
 ];
