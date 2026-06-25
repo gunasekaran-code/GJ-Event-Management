@@ -17,7 +17,7 @@ export function Services() {
     <section id="services" className="bg-white py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <AnimatedReveal>
-          <SectionLabel>— Our Services</SectionLabel>
+          <SectionLabel>Our Services</SectionLabel>
         </AnimatedReveal>
 
         <div className="mt-12 grid gap-12 lg:grid-cols-2 lg:gap-16">

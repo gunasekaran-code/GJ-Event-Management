@@ -11,7 +11,7 @@ export function Reach() {
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <div className="grid gap-16 lg:grid-cols-2">
           <AnimatedReveal>
-            <SectionLabel>📍 Tamil Nadu Reach</SectionLabel>
+            <SectionLabel>Tamil Nadu Reach</SectionLabel>
             <h2 id="reach-heading" className="mt-3 text-3xl font-bold text-primary md:text-4xl">
               <span className="font-serif italic">Where we produce</span> events
             </h2>

@@ -55,7 +55,7 @@ export const services = [
     description:
       "Professional stage design, LED lighting, and sound coordination for weddings, corporate events, and cultural programmes.",
     image:
-      "https://images.unsplash.com/photo-1478147427282-58a87a153769?w=800&q=80",
+      "https://images.unsplash.com/photo-1651065699638-a50bf6e63bc3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageAlt: "Event stage lighting setup Tamil Nadu",
   },
   {
@@ -73,7 +73,7 @@ export const services = [
     description:
       "Temple festivals, religious processions, and community celebrations with authentic traditional decor and crowd management.",
     image:
-      "https://images.unsplash.com/photo-1605647540924-852290f6e267?w=800&q=80",
+      "https://i.pinimg.com/1200x/30/b1/8c/30b18c1386886b2ff08622ec4a751789.jpg",
     imageAlt: "Temple festival decoration Tamil Nadu",
   },
   {
