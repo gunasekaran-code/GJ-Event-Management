@@ -94,9 +94,9 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 mx-auto max-w-5xl px-4 py-20 text-center md:px-6">
+      <div className="relative z-20 mx-auto max-w-5xl px-4 py-20 text-center md:px-6 ">
         <AnimatedReveal>
-          <SectionLabel className="mb-4">
+          <SectionLabel className="mb-4" >
             Event Decorators in Thoothukudi, Tamil Nadu
           </SectionLabel>
           <h1 className="text-4xl font-bold leading-tight text-white md:text-6xl lg:text-7xl">

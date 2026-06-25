@@ -1,10 +1,8 @@
 "use client";
-
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Phone, Menu } from "lucide-react";
-import { InstagramIcon } from "@/components/ui/InstagramIcon";
 import { siteConfig, navLinks } from "@/lib/content";
 import { MobileMenu } from "./MobileMenu";
 
@@ -15,6 +13,8 @@ export function Header() {
     <>
       <header className="fixed top-0 left-0 right-0 z-50 glass-strong">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6 md:py-4">
+
+          {/* Logo */}
           <Link href="/#home" className="flex items-center gap-3">
             <Image
               src="/logo.jpg"
@@ -25,60 +25,61 @@ export function Header() {
               className="rounded-lg"
             />
             <div className="hidden sm:block">
-              <p className="text-sm font-bold leading-tight text-primary">
+              <p className="font-bold text-primary transition-colors hover:text-secondary">
                 GJ Decoration
               </p>
-              <p className="text-[10px] uppercase tracking-wider text-primary/50">
+              <p className="text-[10px] font-bold uppercase tracking-wider text-primary/50">
                 Event Management
               </p>
             </div>
           </Link>
 
-          <div className="flex items-center gap-3 md:gap-5">
-            <a
-              href={`tel:${siteConfig.phoneDisplay}`}
-              className="flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-bold text-white transition-transform hover:scale-105"
-            >
-              <Phone className="h-4 w-4" />
-              <span className="hidden md:inline">{siteConfig.phoneDisplay}</span>
-            </a>
+          {/* Right side */}
+          <div className="flex items-center gap-2 md:gap-5">
 
-            <Link
-              href="/#portfolio"
-              className="hidden font-serif text-sm italic text-primary lg:block"
-            >
-              Portfolio
-            </Link>
-            <Link
-              href="/#contact"
-              className="hidden font-serif text-sm italic text-primary lg:block"
-            >
-              Contact
-            </Link>
+            {/* Call button — always visible */}
+<a
+            href={`tel:${siteConfig.phone}`}
+            className="flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-bold text-white transition-transform hover:scale-105"
+>
+            <Phone className="h-4 w-4" />
+            <span className="hidden md:inline">{siteConfig.phoneDisplay}</span>
+          </a>
 
-            <a
-              href={siteConfig.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              className="hidden text-primary transition-colors hover:text-secondary md:block"
-            >
-              <InstagramIcon className="h-5 w-5" />
-            </a>
+          {/* Book Now — always visible */}
+          <Link
+            href="/Booking"
+            className="flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-bold text-white transition-transform hover:scale-105"
+          >
+            <span>Book Now</span>
+          </Link>
 
-            <button
-              onClick={() => setMenuOpen(true)}
-              className="flex items-center gap-2 text-primary transition-colors hover:text-secondary"
-              aria-label="Open menu"
-            >
-              <span className="hidden text-xs font-bold uppercase tracking-wider sm:inline">
-                Menu
-              </span>
-              <Menu className="h-5 w-5" />
-            </button>
-          </div>
+          {/* Desktop nav links */}
+          <Link
+            href="/#portfolio"
+            className="hidden md:block text-sm font-bold text-primary hover:text-secondary transition-colors"
+          >
+            Portfolio
+          </Link>
+          <Link
+            href="/#contact"
+            className="hidden md:block text-sm font-bold text-primary hover:text-secondary transition-colors"
+          >
+            Contact
+          </Link>
+
+          {/* Menu button — always visible */}
+          <button
+            onClick={() => setMenuOpen(true)}
+            className="flex items-center gap-1.5 text-primary transition-colors hover:text-secondary font-bold"
+            aria-label="Open menu"
+          >
+            <span className="hidden md:block text-sm font-bold">Menu</span>
+            <Menu className="h-5 w-5" />
+          </button>
         </div>
-      </header>
+      </div>
+    </header >
 
       <MobileMenu
         open={menuOpen}
