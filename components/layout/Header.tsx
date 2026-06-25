@@ -17,10 +17,11 @@ export function Header() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6 md:py-4">
           <Link href="/#home" className="flex items-center gap-3">
             <Image
-              src="/logo.svg"
+              src="/logo.jpg"
               alt="GJ Decoration logo"
-              width={40}
-              height={40}
+              width={50}
+              height={50}
+              loading="eager"
               className="rounded-lg"
             />
             <div className="hidden sm:block">
