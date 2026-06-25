@@ -154,16 +154,7 @@ export const portfolio = [
 ];
 
 export const stats = [
-  {
-    id: "years",
-    value: "15+",
-    title: "Years of Excellence",
-    description:
-      "Over a decade and a half crafting memorable celebrations across Tamil Nadu, rooted in Thoothukudi traditions.",
-    image:
-      "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80",
-    imageAlt: "Years of event management experience Tamil Nadu",
-  },
+  
   {
     id: "events",
     value: "2000+",
@@ -171,7 +162,7 @@ export const stats = [
     description:
       "From intimate family gatherings to grand weddings — every event executed with precision and care.",
     image:
-      "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&q=80",
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageAlt: "Events delivered across Tamil Nadu",
   },
   {
@@ -181,7 +172,7 @@ export const stats = [
     description:
       "Serving Thoothukudi, Tirunelveli, Madurai, Chennai, and towns across Tamil Nadu and beyond.",
     image:
-      "https://images.unsplash.com/photo-1478147427282-58a87a153769?w=600&q=80",
+      "https://images.unsplash.com/photo-1723832348105-2e69f948135a?q=80&w=1012&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageAlt: "Event management cities Tamil Nadu",
   },
   {
@@ -191,7 +182,7 @@ export const stats = [
     description:
       "Traditional Tamil weddings with authentic mandap designs, floral artistry, and cultural sensitivity.",
     image:
-      "https://images.unsplash.com/photo-1606800052052-a08af8348862?w=600&q=80",
+      "https://images.unsplash.com/photo-1595436805731-10652dcd9de8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageAlt: "Tamil weddings styled Thoothukudi",
   },
   {
@@ -211,7 +202,7 @@ export const stats = [
     description:
       "Families who trust GJ Decoration to turn their most important moments into lasting memories.",
     image:
-      "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=600&q=80",
+      "https://i.pinimg.com/736x/ae/b8/e4/aeb8e4bd9cb88ea3df3bcf88eab2c572.jpg",
     imageAlt: "Happy families event management Thoothukudi",
   },
 ];
@@ -340,7 +331,7 @@ export const blogPosts = [
     excerpt:
       "How to plan a successful corporate event — from venue selection to stage design and AV production.",
     image:
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80",
+      "https://images.unsplash.com/photo-1651065699638-a50bf6e63bc3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageAlt: "Corporate event planning Tamil Nadu",
   },
   {
