@@ -95,7 +95,7 @@ export const portfolio = [
     description:
       "A stunning floral mandap with banana leaf accents and gold-draped pillars for a 500-guest wedding in Thoothukudi.",
     image:
-      "https://images.unsplash.com/photo-1606800052052-a08af8348862?w=600&q=80",
+      "https://i.pinimg.com/1200x/ab/af/b0/abafb0025c6e0b9eff9b6c991cf0d243.jpg",
     imageAlt: "Traditional Tamil wedding mandap Thoothukudi",
   },
   {
@@ -105,7 +105,7 @@ export const portfolio = [
     description:
       "End-to-end stage design, lighting, and decor for a 300-person corporate annual day in Madurai.",
     image:
-      "https://images.unsplash.com/photo-1505373877841-8d25bb02be08?w=600&q=80",
+      "https://i.pinimg.com/736x/36/0d/d0/360dd0e481f7c96eaf4aeedffe8b1dcf.jpg",
     imageAlt: "Corporate annual day event Madurai Tamil Nadu",
   },
   {
@@ -115,18 +115,8 @@ export const portfolio = [
     description:
       "Vibrant traditional decor and float design for a major temple festival procession in Tirunelveli district.",
     image:
-      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&q=80",
+      "https://i.pinimg.com/1200x/3b/5d/20/3b5d20885ceb74c7aaa341d6e9eb09d8.jpg",
     imageAlt: "Temple festival procession decoration Tirunelveli",
-  },
-  {
-    category: "Reception",
-    client: "Chennai",
-    title: "Grand Reception Stage Setup",
-    description:
-      "Luxurious reception stage with cascading florals and ambient lighting for a Chennai wedding celebration.",
-    image:
-      "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&q=80",
-    imageAlt: "Wedding reception stage Chennai Tamil Nadu",
   },
   {
     category: "Engagement",
@@ -135,8 +125,18 @@ export const portfolio = [
     description:
       "Elegant engagement setup with traditional kolam-inspired floor design and pastel floral arrangements.",
     image:
-      "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=600&q=80",
+      "https://i.pinimg.com/736x/92/44/25/924425822e8bc386b821af4593184b45.jpg",
     imageAlt: "Engagement ceremony decoration Thoothukudi",
+  },
+  {
+    category: "Reception",
+    client: "Chennai",
+    title: "Grand Reception Stage Setup",
+    description:
+      "Luxurious reception stage with cascading florals and ambient lighting for a Chennai wedding celebration.",
+    image:
+      "https://i.pinimg.com/736x/27/f9/43/27f94347be1eb66eb3bb9ccf1c137f51.jpg",
+    imageAlt: "Wedding reception stage Chennai Tamil Nadu",
   },
   {
     category: "Government",
@@ -145,9 +145,12 @@ export const portfolio = [
     description:
       "Stage production and cultural event decor for a government-sponsored district-level programme in Thoothukudi.",
     image:
-      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&q=80",
+      "https://i.pinimg.com/736x/b1/2c/1d/b12c1d66b563380607ec4fda58970e05.jpg",
     imageAlt: "Government cultural event Thoothukudi Tamil Nadu",
   },
+  
+  
+  
 ];
 
 export const stats = [
