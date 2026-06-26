@@ -33,18 +33,13 @@ export function Hero() {
   const [current, setCurrent] = useState(0);
   const [wordIndex, setWordIndex] = useState(0);
 
-  useEffect(() => {
-    const slideTimer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % heroSlides.length);
-    }, 4000);
-    return () => clearInterval(slideTimer);
-  }, []);
 
   useEffect(() => {
-    const wordTimer = setInterval(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % heroSlides.length);
       setWordIndex((prev) => (prev + 1) % rotatingWords.length);
-    }, 2500);
-    return () => clearInterval(wordTimer);
+    }, 4000);
+    return () => clearInterval(timer);
   }, []);
 
   return (
