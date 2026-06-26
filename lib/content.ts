@@ -38,7 +38,7 @@ export const services = [
     description:
       "Traditional Tamil wedding mandap designs with fresh flowers, banana leaves, and elegant lighting — crafted for Thoothukudi and across Tamil Nadu.",
     image:
-      "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80",
+      "https://images.unsplash.com/photo-1587271407850-8d438ca9fdf2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageAlt: "Traditional wedding mandap decoration in Thoothukudi Tamil Nadu",
   },
   {
@@ -47,8 +47,26 @@ export const services = [
     description:
       "Grand reception stage setups, floral arches, and themed backdrops that blend Tamil heritage with contemporary elegance.",
     image:
-      "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80",
+      "https://images.unsplash.com/photo-1587271636175-90d58cdad458?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageAlt: "Wedding reception stage decoration Thoothukudi",
+  },
+  {
+    id: "church-festivals",
+    title: "First Holy Communion",
+    description:
+      "Church festivals, religious processions, and community celebrations with authentic traditional decor and crowd management.",
+    image:
+      "https://i.pinimg.com/1200x/30/b1/8c/30b18c1386886b2ff08622ec4a751789.jpg",
+    imageAlt: "Church festival decoration Tamil Nadu",
+  },
+  {
+    id: "puberty-ceremony",
+    title: "Puberty Ceremonies",
+    description:
+      "Grand Manjal Neerattu Vizha celebrations featuring traditional floral backdrops, majestic seating setups, and elegant styling to honor family milestones with cultural perfection.",
+    image:
+      "https://i.pinimg.com/736x/c6/b9/22/c6b92208599ed52822e155640801e3c7.jpg",
+    imageAlt: "Traditional Manjal Neerattu Vizha puberty ceremony decoration Thoothukudi",
   },
   {
     id: "stage-lighting",
@@ -56,34 +74,17 @@ export const services = [
     description:
       "Professional stage design, LED lighting, and sound coordination for weddings, corporate events, and cultural programmes.",
     image:
-      "https://images.unsplash.com/photo-1651065699638-a50bf6e63bc3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1698568742396-c87bb6682faf?q=80&w=2121&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageAlt: "Event stage lighting setup Tamil Nadu",
   },
-{
-    id: "puberty-ceremony",
-    title: "Puberty Ceremonies",
-    description:
-      "Grand Manjal Neerattu Vizha celebrations featuring traditional floral backdrops, majestic seating setups, and elegant styling to honor family milestones with cultural perfection.",
-    image:
-      "https://i.pinimg.com/736x/c1/d2/ae/c1d2ae99edaf2996498317762acde3cc.jpg",
-    imageAlt: "Traditional Manjal Neerattu Vizha puberty ceremony decoration Thoothukudi",
-  },
-  {
-    id: "temple-festivals",
-    title: "Church Ceremony & First Holy Communion",
-    description:
-      "Temple festivals, religious processions, and community celebrations with authentic traditional decor and crowd management.",
-    image:
-      "https://i.pinimg.com/1200x/30/b1/8c/30b18c1386886b2ff08622ec4a751789.jpg",
-    imageAlt: "Temple festival decoration Tamil Nadu",
-  },
+
   {
     id: "custom-themes",
     title: "Custom Theme Design",
     description:
       "Bespoke theme concepts for birthdays, engagements, baby showers, and milestone celebrations tailored to your vision.",
     image:
-      "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&q=80",
+      "https://i.pinimg.com/1200x/fc/9e/bd/fc9ebd39737b9248089fc0fa8a1ab58d.jpg",
     imageAlt: "Custom themed event decoration Thoothukudi",
   },
 ];
@@ -351,7 +352,7 @@ export const faqs = [
   {
     question: "What event management services do you offer in Thoothukudi?",
     answer:
-      "GJ Decoration & Event Management offers wedding mandap decor, reception staging, corporate events, temple festival decorations, engagement ceremonies, birthday parties, and custom theme design across Thoothukudi and Tamil Nadu.",
+      "GJ Decoration & Event Management offers wedding mandap decor, reception staging, corporate events, church festival decorations, engagement ceremonies, birthday parties, and custom theme design across Thoothukudi and Tamil Nadu.",
   },
   {
     question: "How much does wedding decoration cost in Thoothukudi?",

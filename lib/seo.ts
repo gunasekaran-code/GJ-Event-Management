@@ -13,7 +13,7 @@ export const siteMetadata: Metadata = {
     "event planners Tuticorin",
     "reception decoration Thoothukudi",
     "corporate events Tamil Nadu",
-    "temple festival decoration",
+    "church festival decoration",
     "GJ Decoration",
   ],
   authors: [{ name: siteConfig.name }],

@@ -11,7 +11,7 @@ export function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 glass-strong">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6 md:py-4">
 
           {/* Logo */}
@@ -39,48 +39,48 @@ export function Header() {
           <div className="flex items-center gap-2 md:gap-5">
 
             {/* Call button — always visible */}
-<a
-            href={`tel:${siteConfig.phone}`}
-            className="flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-bold text-white transition-transform hover:scale-105"
->
-            <Phone className="h-4 w-4" />
-            <span className="hidden md:inline">{siteConfig.phoneDisplay}</span>
-          </a>
+            <a
+              href={`tel:${siteConfig.phone}`}
+              className="flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-bold text-white transition-transform hover:scale-105"
+            >
+              <Phone className="h-4 w-4" />
+              <span className="hidden md:inline">{siteConfig.phoneDisplay}</span>
+            </a>
 
-          {/* Book Now — always visible */}
-          <Link
-            href="/Booking"
-            className="flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-bold text-white transition-transform hover:scale-105"
-          >
-            <span>Book Now</span>
-          </Link>
+            {/* Book Now — always visible */}
+            <Link
+              href="/Booking"
+              className="flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-bold text-white transition-transform hover:scale-105"
+            >
+              <span>Book Now</span>
+            </Link>
 
-          {/* Desktop nav links */}
-          <Link
-            href="/#portfolio"
-            className="hidden md:block text-sm font-bold text-primary hover:text-secondary transition-colors"
-          >
-            Portfolio
-          </Link>
-          <Link
-            href="/#contact"
-            className="hidden md:block text-sm font-bold text-primary hover:text-secondary transition-colors"
-          >
-            Contact
-          </Link>
+            {/* Desktop nav links */}
+            <Link
+              href="/#portfolio"
+              className="hidden md:block text-sm font-bold text-primary hover:text-secondary transition-colors"
+            >
+              Portfolio
+            </Link>
+            <Link
+              href="/#contact"
+              className="hidden md:block text-sm font-bold text-primary hover:text-secondary transition-colors"
+            >
+              Contact
+            </Link>
 
-          {/* Menu button — always visible */}
-          <button
-            onClick={() => setMenuOpen(true)}
-            className="flex items-center gap-1.5 text-primary transition-colors hover:text-secondary font-bold"
-            aria-label="Open menu"
-          >
-            <span className="hidden md:block text-sm font-bold">Menu</span>
-            <Menu className="h-5 w-5" />
-          </button>
+            {/* Menu button — always visible */}
+            <button
+              onClick={() => setMenuOpen(true)}
+              className="flex items-center gap-1.5 text-primary transition-colors hover:text-secondary font-bold"
+              aria-label="Open menu"
+            >
+              <span className="hidden md:block text-sm font-bold">Menu</span>
+              <Menu className="h-5 w-5" />
+            </button>
+          </div>
         </div>
-      </div>
-    </header >
+      </header >
 
       <MobileMenu
         open={menuOpen}

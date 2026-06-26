@@ -34,7 +34,7 @@ export function VideoCTA() {
             Celebrate Extraordinary Moments With Us
           </p>
 
-          <h2 className="font-display text-4xl font-bold md:text-5xl lg:text-6xl text-white leading-[1.15] max-w-3xl">
+          <h2 className="font-display text-white text-4xl font-bold md:text-5xl lg:text-6xl  leading-[1.15] max-w-3xl">
             Every Event Tells a Story.<br />
             Let Us Craft Yours.
           </h2>

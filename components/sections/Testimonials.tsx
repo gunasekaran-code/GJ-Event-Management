@@ -36,7 +36,7 @@ export function Testimonials() {
           <div className="text-center">
             <h2 className="text-3xl font-bold text-primary md:text-5xl">
               Trusted by Families{" "}
-              <span className="font-serif italic text-secondary">
+              <span className="font-serif italic text-primary">
                 Loved by Everyone
               </span>
             </h2>
