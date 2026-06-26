@@ -23,6 +23,7 @@ export function Header() {
               height={47}
               loading="eager"
               className="rounded-lg"
+              style={{ height: "auto" }}
             />
             <div className="hidden sm:block">
               <p className="font-bold text-primary transition-colors hover:text-secondary">

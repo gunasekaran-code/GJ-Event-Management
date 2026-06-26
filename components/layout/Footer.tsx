@@ -28,7 +28,7 @@ export function Footer() {
             </h3>
             <ul className="space-y-3">
               {companyLinks.map((link) => (
-                <li key={link.label}>
+                <li key={`${link.href}-${link.label}`}>
                   <Link
                     href={link.href}
                     className="text-sm text-white/80 transition-colors hover:text-secondary"
@@ -46,7 +46,7 @@ export function Footer() {
             </h3>
             <ul className="space-y-3">
               {resourceLinks.map((link) => (
-                <li key={link.label}>
+                <li key={`${link.href}-${link.label}`}>
                   <Link
                     href={link.href}
                     className="text-sm text-white/80 transition-colors hover:text-secondary"
