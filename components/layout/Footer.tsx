@@ -3,8 +3,8 @@ import { siteConfig } from "@/lib/content";
 
 const companyLinks = [
   { label: "About", href: "/#about" },
+  { label: "Book Now", href: "/Booking" },
   { label: "Services", href: "/#services" },
-  { label: "Event Management in Thoothukudi", href: "/#about" },
   { label: "Portfolio", href: "/#portfolio" },
   { label: "Clients", href: "/#clients" },
 ];
