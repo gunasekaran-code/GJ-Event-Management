@@ -17,10 +17,10 @@ export function Header() {
           {/* Logo */}
           <Link href="/#home" className="flex items-center gap-3">
             <Image
-              src="/logo.jpg"
+              src="/logo.png"
               alt="GJ Decoration logo"
-              width={50}
-              height={50}
+              width={47}
+              height={47}
               loading="eager"
               className="rounded-lg"
             />

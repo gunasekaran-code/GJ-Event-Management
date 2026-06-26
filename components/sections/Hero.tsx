@@ -24,7 +24,7 @@ const heroSlides = [
     src: "https://images.unsplash.com/photo-1595436805731-10652dcd9de8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Sangeet stage setup Tamil Nadu event management",
   },
-  
+
 ];
 
 const rotatingWords = ["Timeless", "Elegant", "Sacred", "Grand"];
@@ -86,9 +86,8 @@ export function Hero() {
             key={i}
             onClick={() => setCurrent(i)}
             aria-label={`Go to slide ${i + 1}`}
-            className={`h-1.5 rounded-full transition-all duration-500 ${
-              current === i ? "w-8 bg-white" : "w-1.5 bg-white/40"
-            }`}
+            className={`h-1.5 rounded-full transition-all duration-500 ${current === i ? "w-8 bg-white" : "w-1.5 bg-white/40"
+              }`}
           />
         ))}
       </div>
@@ -96,9 +95,11 @@ export function Hero() {
       {/* Content */}
       <div className="relative z-20 mx-auto max-w-5xl px-4 py-20 text-center md:px-6 ">
         <AnimatedReveal>
-          <SectionLabel className="mb-4" >
-            Event Decorators in Thoothukudi, Tamil Nadu
-          </SectionLabel>
+          <div className="-mt-4 mb-4 flex justify-center md:mb-5">
+            {/* <SectionLabel className="mb-5 text-xs font-medium tracking-normal text-[#cb8cff] normal-case">
+              Event Decorators in Thoothukudi, Tamil Nadu
+            </SectionLabel> */}
+          </div>
           <h1 className="text-4xl font-bold leading-tight text-white md:text-6xl lg:text-7xl">
             We Craft{" "}
             <span className="relative inline-block font-serif italic text-secondary">
