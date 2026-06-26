@@ -59,18 +59,18 @@ export const services = [
       "https://images.unsplash.com/photo-1651065699638-a50bf6e63bc3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageAlt: "Event stage lighting setup Tamil Nadu",
   },
-  {
-    id: "corporate",
-    title: "Corporate Events",
+{
+    id: "puberty-ceremony",
+    title: "Puberty Ceremonies",
     description:
-      "Product launches, annual days, and corporate gatherings with polished branding, AV production, and seamless logistics.",
+      "Grand Manjal Neerattu Vizha celebrations featuring traditional floral backdrops, majestic seating setups, and elegant styling to honor family milestones with cultural perfection.",
     image:
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
-    imageAlt: "Corporate event management Thoothukudi",
+      "https://i.pinimg.com/736x/c1/d2/ae/c1d2ae99edaf2996498317762acde3cc.jpg",
+    imageAlt: "Traditional Manjal Neerattu Vizha puberty ceremony decoration Thoothukudi",
   },
   {
     id: "temple-festivals",
-    title: "Temple & Festival Events",
+    title: "Church Ceremony & First Holy Communion",
     description:
       "Temple festivals, religious processions, and community celebrations with authentic traditional decor and crowd management.",
     image:
@@ -100,24 +100,24 @@ export const portfolio = [
     imageAlt: "Traditional Tamil wedding mandap Thoothukudi",
   },
   {
-    category: "Corporate",
+    category: "Birthday",
     client: "Madurai",
-    title: "Corporate Annual Day Celebration",
+    title: "Enchanted Garden Themed Birthday Gala",
     description:
-      "End-to-end stage design, lighting, and decor for a 300-person corporate annual day in Madurai.",
+      "A magical fairytale birthday celebration featuring custom balloon arches, grand stage lighting, and interactive photo backdrops tailored for an unforgettable family milestone.",
     image:
-      "https://i.pinimg.com/736x/36/0d/d0/360dd0e481f7c96eaf4aeedffe8b1dcf.jpg",
-    imageAlt: "Corporate annual day event Madurai Tamil Nadu",
+      "https://i.pinimg.com/736x/21/31/22/2131226275f003ab90a815c2d31f7606.jpg",
+    imageAlt: "Enchanted garden theme birthday party stage decoration Madurai",
   },
   {
-    category: "Festival",
-    client: "Tirunelveli",
-    title: "Temple Festival Procession Decor",
+    category: "Baby Shower",
+    client: "Thoothukudi",
+    title: "Traditional Seemantham & Valakaappu Decor",
     description:
-      "Vibrant traditional decor and float design for a major temple festival procession in Tirunelveli district.",
+      "Elegant traditional layout featuring vibrant marigold strings, brass urli elements, and a beautifully crafted traditional backdrop for a memorable family celebration.",
     image:
-      "https://i.pinimg.com/1200x/3b/5d/20/3b5d20885ceb74c7aaa341d6e9eb09d8.jpg",
-    imageAlt: "Temple festival procession decoration Tirunelveli",
+      "https://i.pinimg.com/736x/07/38/63/073863b8aa4906bf47ac52839ef0b5a6.jpg",
+    imageAlt: "Traditional South Indian baby shower seemantham decoration Thoothukudi",
   },
   {
     category: "Engagement",
@@ -149,13 +149,13 @@ export const portfolio = [
       "https://i.pinimg.com/736x/b1/2c/1d/b12c1d66b563380607ec4fda58970e05.jpg",
     imageAlt: "Government cultural event Thoothukudi Tamil Nadu",
   },
-  
-  
-  
+
+
+
 ];
 
 export const stats = [
-  
+
   {
     id: "events",
     value: "2000+",
@@ -217,9 +217,9 @@ export const testimonials = [
   },
   {
     quote:
-      "Professional, creative, and deeply respectful of our traditions. They managed our temple festival decor flawlessly.",
+      "Professional, creative, and deeply respectful of our traditions. They managed our Church festival decor flawlessly.",
     name: "S. Murugan",
-    role: "Temple Committee · Tirunelveli",
+    role: "Church Committee · Tirunelveli",
   },
   {
     quote:
@@ -305,7 +305,7 @@ export const locations = [
 export const industries = [
   "Weddings & Receptions",
   "Engagements & Muhurtham",
-  "Temple & Religious Festivals",
+  "Church Ceremony & First Holy Communion",
   "Corporate & Business Events",
   "Government & Public Sector",
   "Birthdays & Milestones",
@@ -338,12 +338,12 @@ export const blogPosts = [
   {
     category: "Festival",
     date: "1 Mar 2026",
-    title: "Temple Festival Decor: Traditions & Modern Touches",
+    title: "Church Festival Decor: Traditions & Modern Touches",
     excerpt:
-      "Blending authentic temple festival traditions with contemporary design for unforgettable celebrations.",
+      "Blending authentic church festival traditions with contemporary design for unforgettable celebrations.",
     image:
       "https://i.pinimg.com/736x/bb/80/7a/bb807a448bf329999ff3813a1c543bd8.jpg",
-    imageAlt: "Temple festival decoration Tamil Nadu",
+    imageAlt: "Church festival decoration Tamil Nadu",
   },
 ];
 

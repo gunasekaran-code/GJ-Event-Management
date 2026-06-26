@@ -97,12 +97,12 @@ export function Hero() {
         <AnimatedReveal>
           <div className="-mt-4 mb-4 flex justify-center md:mb-5">
             {/* <SectionLabel className="mb-5 text-xs font-medium tracking-normal text-[#cb8cff] normal-case">
-              Event Decorators in Thoothukudi, Tamil Nadu
-            </SectionLabel> */}
+      Event Decorators in Thoothukudi, Tamil Nadu
+    </SectionLabel> */}
           </div>
           <h1 className="text-4xl font-bold leading-tight text-white md:text-6xl lg:text-7xl">
             We Craft{" "}
-            <span className="relative inline-block font-serif italic text-secondary">
+            <span className="relative inline-block font-serif italic">
               <AnimatePresence mode="wait">
                 <motion.span
                   key={rotatingWords[wordIndex]}
@@ -110,7 +110,8 @@ export function Hero() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -16 }}
                   transition={{ duration: 0.4, ease: "easeInOut" }}
-                  className="inline-block"
+                  // className="inline-block bg-gradient-to-r from-[#4b164c] via-[var(--color-secondary)] to-[#4b164c] bg-clip-text text-transparent"    // Purple
+                  className="inline-block bg-gradient-to-r from-[#bf953f] via-[#fcf6ba] to-[#aa771c] bg-clip-text text-transparent"   // Gold 
                 >
                   {rotatingWords[wordIndex]}
                 </motion.span>
