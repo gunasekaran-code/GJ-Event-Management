@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { Suspense, useState, useRef, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -36,10 +37,28 @@ interface CustomDropdownProps {
 
 const eventTypes: DropdownOption[] = [
   { label: "Wedding", value: "Wedding" },
+  { label: "Engagement", value: "Engagement" },
   { label: "Birthday", value: "Birthday" },
+  { label: "Puberty Ceremony", value: "Puberty Ceremony" },
+  { label: "Baby Shower", value: "Baby Shower" },
+  { label: "Holy Communion", value: "Holy Communion" },
+  { label: "Name Revealing", value: "Name Revealing" },
   { label: "Corporate", value: "Corporate" },
   { label: "Social Gathering", value: "Social Gathering" },
   { label: "Classical Performance / Dance Event", value: "Classical Performance / Dance Event" },
+];
+
+const productionServices: DropdownOption[] = [
+  { label: "Photography", value: "Photography" },
+  { label: "Lighting", value: "Lighting" },
+  { label: "DJ Events", value: "DJ Events" },
+];
+
+const equipmentServices: DropdownOption[] = [
+  { label: "Arabian Tent", value: "Arabian Tent" },
+  { label: "Panthal", value: "Panthal" },
+  { label: "Chair", value: "Chair" },
+  { label: "Speaker", value: "Speaker" },
 ];
 
 const guestCounts: DropdownOption[] = [
@@ -491,11 +510,51 @@ function DateDropdown({
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
-export default function BookingPage() {
+function BookingForm() {
+  const searchParams = useSearchParams();
   const [eventType, setEventType] = useState("");
   const [guestCount, setGuestCount] = useState("");
   const [startTime, setStartTime] = useState("");
   const [eventDate, setEventDate] = useState("");
+  const [productionSelection, setProductionSelection] = useState<string[]>([]);
+  const [equipmentSelection, setEquipmentSelection] = useState<string[]>([]);
+  const [selectionOrder, setSelectionOrder] = useState<string[]>([]);
+
+  useEffect(() => {
+    const event = searchParams.get("event") ?? "";
+    const services =
+      searchParams.get("services")?.split(",").filter(Boolean) ?? [];
+    const equipment =
+      searchParams.get("equipment")?.split(",").filter(Boolean) ?? [];
+    const selection =
+      searchParams.get("selection")?.split(",").filter(Boolean) ?? [];
+
+    if (event) setEventType(event);
+    if (services.length) setProductionSelection(services);
+    if (equipment.length) setEquipmentSelection(equipment);
+    if (selection.length) setSelectionOrder(selection);
+  }, [searchParams]);
+
+  function toggleProduction(value: string) {
+    setProductionSelection((prev) =>
+      prev.includes(value) ? prev.filter((v) => v !== value) : [...prev, value]
+    );
+  }
+
+  function toggleEquipment(value: string) {
+    setEquipmentSelection((prev) =>
+      prev.includes(value) ? prev.filter((v) => v !== value) : [...prev, value]
+    );
+  }
+
+  const selectedSummary =
+    selectionOrder.length > 0
+      ? selectionOrder
+      : [
+          ...(eventType ? [eventType] : []),
+          ...productionSelection,
+          ...equipmentSelection,
+        ];
 
   return (
     <>
@@ -503,13 +562,21 @@ export default function BookingPage() {
       <main className="bg-[#f5f5f5] pt-15 md:pt-15">
         <section className="relative overflow-hidden bg-[#f8e7f6]/100 py-10 md:py-16">
           <div className="relative mx-auto max-w-7xl px-5 md:px-6">
-            <Link
-              href="/#home"
-              className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#4b164c]/10 bg-white/80 px-4 py-2 text-sm font-bold text-[#4b164c] shadow-[0_10px_30px_rgba(75,22,76,0.08)] transition-all hover:border-[#bc5eff]/50 hover:text-[#bc5eff] hover:shadow-[0_14px_36px_rgba(188,94,255,0.16)]"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              Back to home
-            </Link>
+            <div className="mb-7 flex flex-wrap gap-3">
+              <Link
+                href="/#home"
+                className="inline-flex items-center gap-2 rounded-full border border-[#4b164c]/10 bg-white/80 px-4 py-2 text-sm font-bold text-[#4b164c] shadow-[0_10px_30px_rgba(75,22,76,0.08)] transition-all hover:border-[#bc5eff]/50 hover:text-[#bc5eff] hover:shadow-[0_14px_36px_rgba(188,94,255,0.16)]"
+              >
+                <ArrowLeft className="h-4 w-4" />
+                Back to home
+              </Link>
+              <Link
+                href="/Pricing"
+                className="inline-flex items-center gap-2 rounded-full border border-[#4b164c]/10 bg-white/80 px-4 py-2 text-sm font-bold text-[#4b164c] shadow-[0_10px_30px_rgba(75,22,76,0.08)] transition-all hover:border-[#bc5eff]/50 hover:text-[#bc5eff] hover:shadow-[0_14px_36px_rgba(188,94,255,0.16)]"
+              >
+                View pricing
+              </Link>
+            </div>
 
             <div className="grid gap-9 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
               <div className="flex flex-col h-full"> {/* Added flex column to control height */}
@@ -556,6 +623,17 @@ export default function BookingPage() {
 
               {/* Form */}
               <form className="glass-strong rounded-3xl p-5 shadow-[0_24px_80px_rgba(75,22,76,0.12)] md:p-8">
+                {selectedSummary.length > 0 && (
+                  <div className="mb-6 rounded-2xl border border-[#bc5eff]/20 bg-[#f8e7f6]/70 p-4">
+                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#bc5eff]">
+                      Selected from pricing Pricing
+                    </p>
+                    <p className="mt-2 text-sm font-semibold text-[#4b164c]">
+                      {selectedSummary.join(" → ")}
+                    </p>
+                  </div>
+                )}
+
                 <div className="grid gap-5 md:grid-cols-2">
                   <label className="space-y-2">
                     <span className="text-sm font-bold text-[#4b164c]">Full Name</span>
@@ -630,8 +708,58 @@ export default function BookingPage() {
                       options={guestCounts}
                       value={guestCount}
                       onChange={setGuestCount}
-                      direction="up" // <-- Added prop here to open upwards
+                      direction="up"
                     />
+                  </div>
+
+                  <div className="md:col-span-2">
+                    <p className="text-sm font-bold text-[#4b164c]">
+                      Production Services
+                    </p>
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      {productionServices.map((service) => {
+                        const active = productionSelection.includes(service.value);
+                        return (
+                          <button
+                            key={service.value}
+                            type="button"
+                            onClick={() => toggleProduction(service.value)}
+                            className={`rounded-full border px-4 py-2 text-sm font-semibold transition-all duration-200 ${
+                              active
+                                ? "border-[#bc5eff] bg-[#bc5eff]/10 text-[#bc5eff] shadow-[0_8px_24px_rgba(188,94,255,0.15)]"
+                                : "border-[#4b164c]/10 bg-white text-[#4b164c]/70 hover:border-[#bc5eff]/40 hover:text-[#4b164c]"
+                            }`}
+                          >
+                            {service.label}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  <div className="md:col-span-2">
+                    <p className="text-sm font-bold text-[#4b164c]">
+                      Equipment & Setup
+                    </p>
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      {equipmentServices.map((service) => {
+                        const active = equipmentSelection.includes(service.value);
+                        return (
+                          <button
+                            key={service.value}
+                            type="button"
+                            onClick={() => toggleEquipment(service.value)}
+                            className={`rounded-full border px-4 py-2 text-sm font-semibold transition-all duration-200 ${
+                              active
+                                ? "border-[#bc5eff] bg-[#bc5eff]/10 text-[#bc5eff] shadow-[0_8px_24px_rgba(188,94,255,0.15)]"
+                                : "border-[#4b164c]/10 bg-white text-[#4b164c]/70 hover:border-[#bc5eff]/40 hover:text-[#4b164c]"
+                            }`}
+                          >
+                            {service.label}
+                          </button>
+                        );
+                      })}
+                    </div>
                   </div>
                 </div>
 
@@ -640,6 +768,21 @@ export default function BookingPage() {
                 <input type="hidden" name="guestCount" value={guestCount} />
                 <input type="hidden" name="startTime" value={startTime} />
                 <input type="hidden" name="eventDate" value={eventDate} />
+                <input
+                  type="hidden"
+                  name="selectedPackages"
+                  value={selectedSummary.join(", ")}
+                />
+                <input
+                  type="hidden"
+                  name="productionServices"
+                  value={productionSelection.join(", ")}
+                />
+                <input
+                  type="hidden"
+                  name="equipmentServices"
+                  value={equipmentSelection.join(", ")}
+                />
 
                 <button
                   type="submit"
@@ -660,5 +803,25 @@ export default function BookingPage() {
       <Footer />
       <ScrollToTop />
     </>
+  );
+}
+
+export default function BookingPage() {
+  return (
+    <Suspense
+      fallback={
+        <>
+          <Header />
+          <main className="bg-[#f5f5f5] pt-15 md:pt-15">
+            <section className="py-20 text-center text-[#4b164c]/60">
+              Loading booking form...
+            </section>
+          </main>
+          <Footer />
+        </>
+      }
+    >
+      <BookingForm />
+    </Suspense>
   );
 }

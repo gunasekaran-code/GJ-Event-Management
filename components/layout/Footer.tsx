@@ -3,6 +3,7 @@ import { siteConfig } from "@/lib/content";
 
 const companyLinks = [
   { label: "About", href: "/#about" },
+  { label: "Pricing", href: "/Pricing" },
   { label: "Book Now", href: "/Booking" },
   { label: "Services", href: "/#services" },
   { label: "Portfolio", href: "/#portfolio" },

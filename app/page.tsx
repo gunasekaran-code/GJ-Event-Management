@@ -11,6 +11,7 @@ import { Reach } from "@/components/sections/Reach";
 import { BlogPreview } from "@/components/sections/BlogPreview";
 import { FAQ } from "@/components/sections/FAQ";
 import { ClientMarquee } from "@/components/sections/ClientMarquee";
+import { OurTeam } from "@/components/sections/OurTeam";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
         <VideoCTA/>
         <Reach />
         <BlogPreview />
+        <OurTeam />
         <FAQ />
         <ClientMarquee />
       </main>

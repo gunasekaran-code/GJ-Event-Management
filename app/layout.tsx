@@ -1,7 +1,10 @@
-import { Plus_Jakarta_Sans, Fraunces } from "next/font/google";
+import { Plus_Jakarta_Sans, Fraunces, Geist } from "next/font/google";
 import { siteMetadata, getLocalBusinessJsonLd } from "@/lib/seo";
 import { SmoothScrollProvider } from "@/components/providers/SmoothScrollProvider";
 import "./globals.css";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -28,7 +31,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${plusJakarta.variable} ${fraunces.variable} h-full scroll-smooth antialiased`}
+      className={cn("h-full", "scroll-smooth", "antialiased", plusJakarta.variable, fraunces.variable, "font-sans", geist.variable)}
     >
       <head>
         <script

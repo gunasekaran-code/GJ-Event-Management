@@ -24,11 +24,178 @@ export const siteConfig = {
 export const navLinks = [
   { label: "Home", href: "/#home" },
   { label: "About", href: "/#about" },
+  { label: "Pricing", href: "/Pricing" },
   { label: "Booking", href: "/Booking" },
   { label: "Services", href: "/#services" },
   { label: "Portfolio", href: "/#portfolio" },
   { label: "Clients", href: "/#clients" },
   { label: "Contact", href: "/#contact" },
+];
+
+export type PricingItem = {
+  id: string;
+  name: string;
+  price: string;
+  priceNote: string;
+  description: string;
+  features: string[];
+};
+
+export type PricingCategory = {
+  id: string;
+  title: string;
+  subtitle: string;
+  items: PricingItem[];
+};
+
+export const pricingCategories: PricingCategory[] = [
+  {
+    id: "events",
+    title: "Event Celebrations",
+    subtitle: "Traditional ceremonies & milestone celebrations",
+    items: [
+      {
+        id: "wedding",
+        name: "Wedding",
+        price: "₹1,25,000",
+        priceNote: "Starting from",
+        description:
+          "Complete mandap decor, floral arrangements, stage setup, and traditional Tamil wedding styling.",
+        features: ["Mandap & stage decor", "Fresh floral arrangements", "Entrance & aisle styling", "On-day coordination"],
+      },
+      {
+        id: "engagement",
+        name: "Engagement",
+        price: "₹45,000",
+        priceNote: "Starting from",
+        description:
+          "Elegant engagement setup with floral backdrops, seating, and kolam-inspired floor design.",
+        features: ["Stage backdrop", "Floral arch", "Seating arrangement", "Traditional accents"],
+      },
+      {
+        id: "birthday",
+        name: "Birthday",
+        price: "₹25,000",
+        priceNote: "Starting from",
+        description:
+          "Themed birthday decor with balloon arches, stage design, and custom photo backdrops.",
+        features: ["Theme setup", "Balloon decor", "Stage & backdrop", "Table styling"],
+      },
+      {
+        id: "puberty-ceremony",
+        name: "Puberty Ceremony",
+        price: "₹35,000",
+        priceNote: "Starting from",
+        description:
+          "Manjal Neerattu Vizha decor with traditional floral backdrops and majestic seating.",
+        features: ["Traditional backdrop", "Floral garlands", "Seating setup", "Cultural styling"],
+      },
+      {
+        id: "baby-shower",
+        name: "Baby Shower",
+        price: "₹30,000",
+        priceNote: "Starting from",
+        description:
+          "Seemantham & Valakaappu decor with marigold strings, brass urli, and elegant layouts.",
+        features: ["Traditional backdrop", "Marigold strings", "Brass urli decor", "Seating layout"],
+      },
+      {
+        id: "holy-communion",
+        name: "Holy Communion",
+        price: "₹40,000",
+        priceNote: "Starting from",
+        description:
+          "Church ceremony decor with reverent floral arrangements and stage styling.",
+        features: ["Altar & stage decor", "Floral arrangements", "Seating setup", "Procession styling"],
+      },
+      {
+        id: "name-revealing",
+        name: "Name Revealing",
+        price: "₹28,000",
+        priceNote: "Starting from",
+        description:
+          "Beautiful name reveal setup with themed backdrops, balloons, and family photo zones.",
+        features: ["Reveal backdrop", "Balloon decor", "Photo zone", "Table styling"],
+      },
+    ],
+  },
+  {
+    id: "production",
+    title: "Entertainment & Production",
+    subtitle: "Photography, lighting, and DJ services",
+    items: [
+      {
+        id: "photography",
+        name: "Photography",
+        price: "₹15,000",
+        priceNote: "Starting from",
+        description:
+          "Professional event photography covering ceremonies, candid moments, and family portraits.",
+        features: ["Full event coverage", "Edited digital album", "Candid & posed shots", "Same-day highlights"],
+      },
+      {
+        id: "lighting",
+        name: "Lighting",
+        price: "₹20,000",
+        priceNote: "Starting from",
+        description:
+          "Stage LED lighting, ambient mood lights, and professional light design for your venue.",
+        features: ["Stage LED setup", "Ambient lighting", "Colour wash effects", "Light operator"],
+      },
+      {
+        id: "dj-events",
+        name: "DJ Events",
+        price: "₹18,000",
+        priceNote: "Starting from",
+        description:
+          "DJ setup with sound system, music coordination, and dance floor lighting.",
+        features: ["DJ & sound system", "Wireless mics", "Dance floor lights", "Music coordination"],
+      },
+    ],
+  },
+  {
+    id: "equipment",
+    title: "Equipment & Setup",
+    subtitle: "Tents, panthal, seating, and audio",
+    items: [
+      {
+        id: "arabian-tent",
+        name: "Arabian Tent",
+        price: "₹35,000",
+        priceNote: "Starting from",
+        description:
+          "Premium Arabian tent setup with draping, flooring, and elegant interior styling.",
+        features: ["Tent structure", "Draping & flooring", "Interior lighting", "Entry styling"],
+      },
+      {
+        id: "panthal",
+        name: "Panthal",
+        price: "₹55,000",
+        priceNote: "Starting from",
+        description:
+          "Traditional panthal structure with banana leaves, flowers, and pillar decor.",
+        features: ["Panthal structure", "Banana leaf styling", "Pillar decor", "Floral accents"],
+      },
+      {
+        id: "chair",
+        name: "Chair",
+        price: "₹8,000",
+        priceNote: "Starting from",
+        description:
+          "Premium chair rental with covers, sashes, and coordinated seating layout.",
+        features: ["Chair rental", "Covers & sashes", "Layout planning", "Setup & removal"],
+      },
+      {
+        id: "speaker",
+        name: "Speaker",
+        price: "₹12,000",
+        priceNote: "Starting from",
+        description:
+          "Professional speaker and PA system for announcements, music, and ceremonies.",
+        features: ["PA system", "Wireless mics", "Sound operator", "Backup equipment"],
+      },
+    ],
+  },
 ];
 
 export const services = [
