@@ -122,21 +122,31 @@ export function OurTeam() {
                   className="relative h-52 w-full flex items-center justify-center"
                   style={{ backgroundColor: "#f8e7f6" }}
                 >
-                  <div className="flex flex-col items-center gap-2 select-none">
-                    <div
-                      className="w-20 h-20 rounded-full flex items-center justify-center text-2xl font-bold"
-                      style={{
-                        backgroundColor: "#4b164c",
-                        color: "#f8e7f6",
-                      }}
-                    >
-                      {member.initials}
+                  {/* ✅ FIX: Check if a photo exists. If yes, show it. If no, show the placeholder. */}
+                  {member.photo ? (
+                    <img
+                      src={member.photo}
+                      alt={`${member.name} photo`}
+                      className="h-full w-full object-cover"
+                    />
+                  ) : (
+                    <div className="flex flex-col items-center gap-2 select-none">
+                      <div
+                        className="w-20 h-20 rounded-full flex items-center justify-center text-2xl font-bold"
+                        style={{
+                          backgroundColor: "#4b164c",
+                          color: "#f8e7f6",
+                        }}
+                      >
+                        {member.initials}
+                      </div>
+                      <span className="text-xs text-primary/30 tracking-wide">
+                        Photo coming soon
+                      </span>
                     </div>
-                    <span className="text-xs text-primary/30 tracking-wide">
-                      Photo coming soon
-                    </span>
-                  </div>
-                  <div className="absolute bottom-0 inset-x-0 h-12 bg-gradient-to-t from-white/80 to-transparent" />
+                  )}
+
+                  <div className="absolute bottom-0 inset-x-0 h-12 bg-gradient-to-t from-white/80 to-transparent pointer-events-none" />
                 </div>
 
                 <div className="p-8 md:p-10">

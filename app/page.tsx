@@ -8,10 +8,12 @@ import { BehindTheScenes } from "@/components/sections/BehindTheScenes";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { VideoCTA } from "@/components/sections/VideoCTA";
 import { Reach } from "@/components/sections/Reach";
+import { OurTeam } from "@/components/sections/OurTeam";
+import { Reach1 } from "@/components/sections/Reach1";
 import { BlogPreview } from "@/components/sections/BlogPreview";
 import { FAQ } from "@/components/sections/FAQ";
 import { ClientMarquee } from "@/components/sections/ClientMarquee";
-import { OurTeam } from "@/components/sections/OurTeam";
+
 
 export default function Home() {
   return (
@@ -25,8 +27,9 @@ export default function Home() {
         <Testimonials />
         <VideoCTA/>
         <Reach />
-        <BlogPreview />
         <OurTeam />
+        <Reach1 />
+        <BlogPreview />
         <FAQ />
         <ClientMarquee />
       </main>

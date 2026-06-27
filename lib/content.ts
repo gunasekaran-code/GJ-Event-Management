@@ -561,7 +561,7 @@ export const teamMembers = [
     role: "Timeline, vendors, and on-day support",
     description:
       "Keeps the moving parts aligned so every setup is ready on time and the celebration feels calm from start to finish.",
-    photo: "/team/event-coordination.jpg",
+    photo: "https://images.unsplash.com/photo-1565598469107-2bd14ae7e7e4?q=80&w=2123&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     initials: "EC",
     emoji: "📋",
   },
@@ -570,7 +570,7 @@ export const teamMembers = [
     role: "Concepts, themes, and event styling",
     description:
       "Translates your occasion into a clear decoration plan with colors, floral cues, stage styling, and guest-flow details.",
-    photo: "/team/creative-planning.jpg",
+    photo: "https://plus.unsplash.com/premium_photo-1677529496297-fd0174d65941?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     initials: "CP",
     emoji: "🎨",
   },
@@ -579,7 +579,7 @@ export const teamMembers = [
     role: "Theme setup, decor, and celebration styling",
     description:
       "Designs memorable baby shower experiences with customized themes, balloon arrangements, floral decorations, and elegant stage setups.",
-    photo: "/team/baby-shower.jpg",
+    photo: "https://plus.unsplash.com/premium_photo-1683140538839-f9d18fa3ae5b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     initials: "BS",
     emoji: "👶",
   },
@@ -588,17 +588,8 @@ export const teamMembers = [
     role: "Traditional setup and venue decoration",
     description:
       "Creates beautiful traditional panthal arrangements with floral work, entrance designs, cultural elements, and complete venue styling.",
-    photo: "/team/panthal-decoration.jpg",
+    photo: "https://plus.unsplash.com/premium_photo-1661277666101-01fb123f2a4c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     initials: "PD",
     emoji: "🏵️",
-  },
-  {
-    name: "Production Team",
-    role: "Fabrication, setup, and finishing",
-    description:
-      "Builds the visible experience on site, from entrance arches and backdrops to lighting, props, and clean final touches.",
-    photo: "/team/production-team.jpg",
-    initials: "PT",
-    emoji: "🏗️",
   },
 ];
