@@ -570,12 +570,12 @@ function BookingForm() {
                 <ArrowLeft className="h-4 w-4" />
                 Back to home
               </Link>
-              <Link
+              {/* <Link
                 href="/Pricing"
                 className="inline-flex items-center gap-2 rounded-full border border-[#4b164c]/10 bg-white/80 px-4 py-2 text-sm font-bold text-[#4b164c] shadow-[0_10px_30px_rgba(75,22,76,0.08)] transition-all hover:border-[#bc5eff]/50 hover:text-[#bc5eff] hover:shadow-[0_14px_36px_rgba(188,94,255,0.16)]"
               >
                 View pricing
-              </Link>
+              </Link> */}
             </div>
 
             <div className="grid gap-9 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">

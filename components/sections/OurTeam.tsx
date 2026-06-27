@@ -1,17 +1,19 @@
 "use client";
 
-import React, { ReactNode } from "react";
+import React, { ReactNode, useRef, useState, useEffect } from "react";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 
 interface ScrollStackItemProps {
   children: ReactNode;
   index?: number;
   total?: number;
+  baseTop?: number;
 }
 
 interface ScrollStackProps {
   children: ReactNode;
   className?: string;
+  baseTop?: number;
 }
 
 const teamMembers = [
@@ -44,14 +46,16 @@ const teamMembers = [
   },
 ];
 
-export function ScrollStackItem({ children, index = 0 }: ScrollStackItemProps) {
+export function ScrollStackItem({
+  children,
+  index = 0,
+  baseTop = 120,
+}: ScrollStackItemProps) {
   return (
     <div
       className="sticky"
       style={{
-        // Using a fixed base (120px) prevents "jumping" on different screens.
-        // The index offset creates the slight stack effect.
-        top: `calc(120px + ${index * 24}px)`,
+        top: `calc(${baseTop}px + ${index * 24}px)`,
         zIndex: index + 10,
       }}
     >
@@ -60,7 +64,11 @@ export function ScrollStackItem({ children, index = 0 }: ScrollStackItemProps) {
   );
 }
 
-function ScrollStack({ children, className = "" }: ScrollStackProps) {
+function ScrollStack({
+  children,
+  className = "",
+  baseTop = 120,
+}: ScrollStackProps) {
   const items = React.Children.toArray(children);
 
   return (
@@ -69,7 +77,7 @@ function ScrollStack({ children, className = "" }: ScrollStackProps) {
         if (React.isValidElement(child)) {
           return React.cloneElement(
             child as React.ReactElement<ScrollStackItemProps>,
-            { index, total: items.length }
+            { index, total: items.length, baseTop }
           );
         }
         return child;
@@ -79,12 +87,46 @@ function ScrollStack({ children, className = "" }: ScrollStackProps) {
 }
 
 export function OurTeam() {
+  const headerRef = useRef<HTMLDivElement>(null);
+  const [baseTop, setBaseTop] = useState(128); // desktop default (top-32)
+
+  useEffect(() => {
+    const NAV_HEIGHT = 80; // height of your fixed navbar — adjust if different
+
+    const compute = () => {
+      const isDesktop = window.innerWidth >= 1024; // lg breakpoint
+      if (isDesktop) {
+        // On desktop cards are in a separate column, just clear the navbar
+        setBaseTop(128); // matches lg:top-32
+      } else {
+        // On mobile the header is above the cards in a single column.
+        // Cards must stack below: navbar offset + sticky header height + small gap.
+        const headerHeight = headerRef.current?.offsetHeight ?? 0;
+        setBaseTop(NAV_HEIGHT + headerHeight + 12);
+      }
+    };
+
+    compute();
+
+    const ro = new ResizeObserver(compute);
+    if (headerRef.current) ro.observe(headerRef.current);
+    window.addEventListener("resize", compute);
+
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", compute);
+    };
+  }, []);
+
   return (
     <section id="team" className="bg-bg py-20 md:py-28">
       <div className="mx-auto grid max-w-7xl items-start gap-10 px-4 md:px-6 lg:grid-cols-[0.8fr_1.2fr]">
-        
+
         {/* Left side: Pinned header */}
-        <div className="lg:sticky lg:top-32 lg:self-start">
+        <div
+          ref={headerRef}
+          className="sticky top-20 self-start bg-bg z-30 pb-6 lg:top-32 lg:pb-0"
+        >
           <SectionLabel>Our Team</SectionLabel>
           <h2 className="mt-3 text-3xl font-bold text-primary md:text-5xl">
             The people behind{" "}
@@ -97,7 +139,7 @@ export function OurTeam() {
         </div>
 
         {/* Right side: Stacking cards */}
-        <ScrollStack className="space-y-6 pb-[20vh]">
+        <ScrollStack className="space-y-6 pb-[20vh]" baseTop={baseTop}>
           {teamMembers.map((member) => (
             <ScrollStackItem key={member.name}>
               <article className="rounded-[28px] border border-white/70 bg-white/85 shadow-[0_24px_70px_rgba(75,22,76,0.12)] backdrop-blur overflow-hidden">
