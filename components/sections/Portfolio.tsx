@@ -20,7 +20,7 @@ export function Portfolio() {
               </h2>
             </div>
             <Link
-              href="#contact"
+              href="/Pricing"
               className="inline-flex items-center gap-1 text-sm font-bold text-secondary hover:underline"
             >
               See all events

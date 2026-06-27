@@ -78,7 +78,7 @@ export function VideoCTA() {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center gap-3 mt-2">
             <Link
-              href="/booking"
+              href="/Booking"
               className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#4b164c] shadow-lg transition hover:bg-white/90 active:scale-95"
             >
               Book Your Event

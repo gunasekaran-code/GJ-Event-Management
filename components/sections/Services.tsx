@@ -71,10 +71,13 @@ export function Services() {
                             <p className="mt-3 text-primary/70">
                               {service.description}
                             </p>
-                            <span className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-secondary">
+                            <a
+                              href="/Pricing"
+                              className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-secondary hover:opacity-80 transition-opacity"
+                            >
                               Explore Details
                               <ArrowUpRight className="h-3.5 w-3.5" />
-                            </span>
+                            </a>
                           </motion.div>
                         )}
                       </AnimatePresence>

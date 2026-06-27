@@ -382,48 +382,64 @@ export const testimonials = [
       "GJ Decoration transformed our wedding in Thoothukudi into a dream. The mandap was breathtaking — every guest asked who did the decor!",
     name: "Priya & Karthik",
     role: "Wedding · Thoothukudi",
+    avatar: "https://api.dicebear.com/7.x/initials/svg?seed=PK&backgroundColor=f59e0b&textColor=ffffff",
+    rating: 5,
   },
   {
     quote:
       "Professional, creative, and deeply respectful of our traditions. They managed our Church festival decor flawlessly.",
     name: "S. Murugan",
     role: "Church Committee · Tirunelveli",
+    avatar: "https://api.dicebear.com/7.x/initials/svg?seed=PK&backgroundColor=f59e0b&textColor=ffffff",
+    rating: 5,
   },
   {
     quote:
       "Our corporate annual day in Madurai was a huge success. The stage design and lighting were world-class.",
     name: "R. Venkatesh",
     role: "HR Director · Madurai",
+    avatar: "https://api.dicebear.com/7.x/initials/svg?seed=PK&backgroundColor=f59e0b&textColor=ffffff",
+    rating: 5,
   },
   {
     quote:
       "From engagement to reception, GJ handled everything. Their team understood exactly what we wanted for our Tamil wedding.",
     name: "Anitha & Suresh",
     role: "Wedding · Chennai",
+    avatar: "https://api.dicebear.com/7.x/initials/svg?seed=PK&backgroundColor=f59e0b&textColor=ffffff",
+    rating: 5,
   },
   {
     quote:
       "Best event decorators in Thoothukudi! They delivered beyond our expectations on a tight timeline.",
     name: "M. Lakshmi",
     role: "Reception · Thoothukudi",
+    avatar: "https://api.dicebear.com/7.x/initials/svg?seed=PK&backgroundColor=f59e0b&textColor=ffffff",
+    rating: 5,
   },
   {
     quote:
       "The floral arrangements and stage setup for our daughter's wedding were simply stunning. Highly recommend!",
     name: "Dr. Rajesh Kumar",
     role: "Wedding · Thoothukudi",
+    avatar: "https://api.dicebear.com/7.x/initials/svg?seed=PK&backgroundColor=f59e0b&textColor=ffffff",
+    rating: 5,
   },
   {
     quote:
       "GJ Decoration made our community festival look magnificent. True professionals who care about every detail.",
     name: "K. Selvam",
     role: "Community Event · Tuticorin",
+    avatar: "https://api.dicebear.com/7.x/initials/svg?seed=PK&backgroundColor=f59e0b&textColor=ffffff",
+    rating: 5,
   },
   {
     quote:
       "Affordable, reliable, and incredibly talented. Our birthday celebration theme was exactly what we envisioned.",
     name: "Deepa R.",
     role: "Birthday · Thoothukudi",
+    avatar: "https://api.dicebear.com/7.x/initials/svg?seed=PK&backgroundColor=f59e0b&textColor=ffffff",
+    rating: 5,
   },
 ];
 
