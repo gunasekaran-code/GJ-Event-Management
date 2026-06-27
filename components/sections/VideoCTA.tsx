@@ -43,6 +43,12 @@ export function VideoCTA() {
             <span className="italic">a Perfect Stage.</span>
           </h2>
 
+          <h1 className=" font-display" > 
+
+          </h1>
+
+
+
           {/* Sub-copy — pulled from your Google listing description */}
           <p className="text-sm md:text-base text-white/70 max-w-lg leading-relaxed">
             Décor, pandhal, catering, stage, DJ, lighting & more —

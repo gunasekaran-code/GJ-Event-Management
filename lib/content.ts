@@ -543,17 +543,33 @@ export const faqs = [
   },
 ];
 
+// @/lib/content.ts (or .js)
 export const clientLogos = [
-  "Pearl City Hotels",
-  "Tamil Nadu Tourism",
-  "South India Mills",
-  "Thoothukudi Port Trust",
-  "Madurai Corporates",
-  "Tirunelveli Chamber",
-  "Chennai Events Co.",
-  "Coastal Resorts",
+  {
+    name: "OLS shrine Basilica",
+    imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTwI0nSHRB9ObOA4GMczkLvHBhVlCbLfnbMYzL_j2o0OJVw5YdIlpdL2Zu&s=10",
+  },
+  {
+    name: "Aqua Outback",
+    imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYgY3fSB7DvbTwTGKtJr_eODEo90BhX6d9PNqrNyMEz3oR0UXSED_VHC90&s=10",
+  },
+  {
+    name: "Sree Mani Mahal",
+    imgUrl: "https://www.hotelaavudaigrand.com/wp-content/uploads/2024/08/Sree-Mani-Mahal-Web-Page-Logo.png",
+  },
+  {
+    name: "DSF GRAND PLAZA",
+    imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl4Ro-rNtlg3G1gbQOOVUpZhILRwWc6TtRoW7_-bILsB1_mQaFxla4ChQ&s=10",
+  },
+  {
+    name: "Chennai Events Co.",
+    imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGzLstBSK-jM_jqEjw8cNQsmrIfsetvmhh3mB3-XyFeA&s",
+  },
+  {
+    name: "K.Perison Plaza",
+    imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPNAUBTgkzE7z9sWAhpUzBSr8ny1y6xGvEPFjuyka5Vw&s=10",
+  },
 ];
-
 
 export const teamMembers = [
   {
