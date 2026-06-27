@@ -27,6 +27,7 @@ export function ScrollStackItem({
       className="sticky"
       style={{
         top: `calc(${baseTop}px + ${index * 24}px)`,
+        // Ensures each subsequent card sits on top of the previous one
         zIndex: 40 + index,
       }}
     >
@@ -69,9 +70,6 @@ export function OurTeam() {
       if (isDesktop) {
         setBaseTop(128);
       } else {
-        // ✅ FIX 2: On mobile, measure the sticky header's FULL height
-        // (including its bottom padding pb-6 = 24px) so cards stack
-        // below it, not behind it.
         const headerHeight = headerRef.current?.offsetHeight ?? 0;
         setBaseTop(NAV_HEIGHT + headerHeight + 12);
       }
@@ -90,12 +88,10 @@ export function OurTeam() {
   }, []);
 
   return (
-    <section id="team" className="bg-bg py-20 md:py-28">
+    <section id="team" className="bg-bg py-20 md:py-28 relative">
       <div className="mx-auto grid max-w-7xl items-start gap-10 px-4 md:px-6 lg:grid-cols-[0.8fr_1.2fr]">
-
+        
         {/* Left side: Pinned header */}
-        {/* ✅ FIX 3: Lower the header's z-index to z-20 so cards (z-40+)
-            always render in front of it during the scroll-behind phase. */}
         <div
           ref={headerRef}
           className="sticky top-20 self-start bg-bg z-20 pb-6 lg:top-32 lg:pb-0"
@@ -111,10 +107,10 @@ export function OurTeam() {
           </p>
         </div>
 
-        {/* Right side: Stacking cards */}
-        {/* ✅ FIX 4: Reduced pb from pb-[20vh] to pb-[8vh] — enough for
-            the last card to finish stacking without a huge dead-scroll zone. */}
-        <ScrollStack className="space-y-6 pb-[8vh]" baseTop={baseTop}>
+        {/* ✅ FIX: Removed pb-[8vh] which was causing the last card to hang in a "dead scroll" zone.
+          Changed space-y-6 to space-y-8 so the stacked headers show a bit more clearly. 
+        */}
+        <ScrollStack className="space-y-8" baseTop={baseTop}>
           {teamMembers.map((member) => (
             <ScrollStackItem key={member.name}>
               <article className="rounded-[28px] border border-white/70 bg-white/85 shadow-[0_24px_70px_rgba(75,22,76,0.12)] backdrop-blur overflow-hidden">
@@ -122,7 +118,6 @@ export function OurTeam() {
                   className="relative h-52 w-full flex items-center justify-center"
                   style={{ backgroundColor: "#f8e7f6" }}
                 >
-                  {/* ✅ FIX: Check if a photo exists. If yes, show it. If no, show the placeholder. */}
                   {member.photo ? (
                     <img
                       src={member.photo}

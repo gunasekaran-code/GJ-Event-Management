@@ -591,15 +591,6 @@ export const teamMembers = [
     emoji: "🎨",
   },
   {
-    name: "Baby Shower Planning",
-    role: "Theme setup, decor, and celebration styling",
-    description:
-      "Designs memorable baby shower experiences with customized themes, balloon arrangements, floral decorations, and elegant stage setups.",
-    photo: "https://plus.unsplash.com/premium_photo-1683140538839-f9d18fa3ae5b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    initials: "BS",
-    emoji: "👶",
-  },
-  {
     name: "Panthal Decoration",
     role: "Traditional setup and venue decoration",
     description:
