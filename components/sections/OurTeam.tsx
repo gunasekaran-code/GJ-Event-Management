@@ -2,6 +2,7 @@
 
 import React, { ReactNode, useRef, useState, useEffect } from "react";
 import { SectionLabel } from "@/components/ui/SectionLabel";
+import { teamMembers } from "@/lib/content";
 
 interface ScrollStackItemProps {
   children: ReactNode;
@@ -16,36 +17,6 @@ interface ScrollStackProps {
   baseTop?: number;
 }
 
-const teamMembers = [
-  {
-    name: "Event Coordination",
-    role: "Timeline, vendors, and on-day support",
-    description:
-      "Keeps the moving parts aligned so every setup is ready on time and the celebration feels calm from start to finish.",
-    photo: "/team/event-coordination.jpg",
-    initials: "EC",
-    emoji: "📋",
-  },
-  {
-    name: "Creative Planning",
-    role: "Concepts, themes, and event styling",
-    description:
-      "Translates your occasion into a clear decoration plan with colors, floral cues, stage styling, and guest-flow details.",
-    photo: "/team/creative-planning.jpg",
-    initials: "CP",
-    emoji: "🎨",
-  },
-  {
-    name: "Production Team",
-    role: "Fabrication, setup, and finishing",
-    description:
-      "Builds the visible experience on site, from entrance arches and backdrops to lighting, props, and clean final touches.",
-    photo: "/team/production-team.jpg",
-    initials: "PT",
-    emoji: "🏗️",
-  },
-];
-
 export function ScrollStackItem({
   children,
   index = 0,
@@ -56,7 +27,7 @@ export function ScrollStackItem({
       className="sticky"
       style={{
         top: `calc(${baseTop}px + ${index * 24}px)`,
-        zIndex: index + 10,
+        zIndex: 40 + index,
       }}
     >
       {children}
@@ -88,19 +59,19 @@ function ScrollStack({
 
 export function OurTeam() {
   const headerRef = useRef<HTMLDivElement>(null);
-  const [baseTop, setBaseTop] = useState(128); // desktop default (top-32)
+  const [baseTop, setBaseTop] = useState(128);
 
   useEffect(() => {
-    const NAV_HEIGHT = 80; // height of your fixed navbar — adjust if different
+    const NAV_HEIGHT = 80;
 
     const compute = () => {
-      const isDesktop = window.innerWidth >= 1024; // lg breakpoint
+      const isDesktop = window.innerWidth >= 1024;
       if (isDesktop) {
-        // On desktop cards are in a separate column, just clear the navbar
-        setBaseTop(128); // matches lg:top-32
+        setBaseTop(128);
       } else {
-        // On mobile the header is above the cards in a single column.
-        // Cards must stack below: navbar offset + sticky header height + small gap.
+        // ✅ FIX 2: On mobile, measure the sticky header's FULL height
+        // (including its bottom padding pb-6 = 24px) so cards stack
+        // below it, not behind it.
         const headerHeight = headerRef.current?.offsetHeight ?? 0;
         setBaseTop(NAV_HEIGHT + headerHeight + 12);
       }
@@ -123,9 +94,11 @@ export function OurTeam() {
       <div className="mx-auto grid max-w-7xl items-start gap-10 px-4 md:px-6 lg:grid-cols-[0.8fr_1.2fr]">
 
         {/* Left side: Pinned header */}
+        {/* ✅ FIX 3: Lower the header's z-index to z-20 so cards (z-40+)
+            always render in front of it during the scroll-behind phase. */}
         <div
           ref={headerRef}
-          className="sticky top-20 self-start bg-bg z-30 pb-6 lg:top-32 lg:pb-0"
+          className="sticky top-20 self-start bg-bg z-20 pb-6 lg:top-32 lg:pb-0"
         >
           <SectionLabel>Our Team</SectionLabel>
           <h2 className="mt-3 text-3xl font-bold text-primary md:text-5xl">
@@ -139,7 +112,9 @@ export function OurTeam() {
         </div>
 
         {/* Right side: Stacking cards */}
-        <ScrollStack className="space-y-6 pb-[20vh]" baseTop={baseTop}>
+        {/* ✅ FIX 4: Reduced pb from pb-[20vh] to pb-[8vh] — enough for
+            the last card to finish stacking without a huge dead-scroll zone. */}
+        <ScrollStack className="space-y-6 pb-[8vh]" baseTop={baseTop}>
           {teamMembers.map((member) => (
             <ScrollStackItem key={member.name}>
               <article className="rounded-[28px] border border-white/70 bg-white/85 shadow-[0_24px_70px_rgba(75,22,76,0.12)] backdrop-blur overflow-hidden">

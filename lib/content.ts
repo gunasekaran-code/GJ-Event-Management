@@ -553,3 +553,52 @@ export const clientLogos = [
   "Chennai Events Co.",
   "Coastal Resorts",
 ];
+
+
+export const teamMembers = [
+  {
+    name: "Event Coordination",
+    role: "Timeline, vendors, and on-day support",
+    description:
+      "Keeps the moving parts aligned so every setup is ready on time and the celebration feels calm from start to finish.",
+    photo: "/team/event-coordination.jpg",
+    initials: "EC",
+    emoji: "📋",
+  },
+  {
+    name: "Creative Planning",
+    role: "Concepts, themes, and event styling",
+    description:
+      "Translates your occasion into a clear decoration plan with colors, floral cues, stage styling, and guest-flow details.",
+    photo: "/team/creative-planning.jpg",
+    initials: "CP",
+    emoji: "🎨",
+  },
+  {
+    name: "Baby Shower Planning",
+    role: "Theme setup, decor, and celebration styling",
+    description:
+      "Designs memorable baby shower experiences with customized themes, balloon arrangements, floral decorations, and elegant stage setups.",
+    photo: "/team/baby-shower.jpg",
+    initials: "BS",
+    emoji: "👶",
+  },
+  {
+    name: "Panthal Decoration",
+    role: "Traditional setup and venue decoration",
+    description:
+      "Creates beautiful traditional panthal arrangements with floral work, entrance designs, cultural elements, and complete venue styling.",
+    photo: "/team/panthal-decoration.jpg",
+    initials: "PD",
+    emoji: "🏵️",
+  },
+  {
+    name: "Production Team",
+    role: "Fabrication, setup, and finishing",
+    description:
+      "Builds the visible experience on site, from entrance arches and backdrops to lighting, props, and clean final touches.",
+    photo: "/team/production-team.jpg",
+    initials: "PT",
+    emoji: "🏗️",
+  },
+];
