@@ -3,8 +3,8 @@ export const siteConfig = {
   shortName: "GJ Decoration",
   tagline: "Traditional Celebrations, Modern Excellence",
   // TODO: Replace with real contact details
-  phone: "+91 98765 43210",
-  phoneDisplay: "9876543210",
+  phone: "+91 63805 84448",
+  phoneDisplay: "63805 84448",
   email: "info@gjdecoration.in",
   instagram: "https://www.instagram.com/gj_decoration_event/",
   whatsapp: "https://wa.me/919876543210",
