@@ -162,7 +162,7 @@ function CustomDropdown({
   const selected = options.find((o) => o.value === value);
 
   // Dynamic classes based on the direction prop
-  const placementClass = direction === "up" ? "bottom-full mb-2" : "top-full mt-2";
+  const placementClass = direction === "up" ? "bottom-full mb-2" : "top-full mt-3";
   const closedTransformClass = direction === "up" ? "translate-y-2" : "-translate-y-2";
 
   return (
@@ -288,7 +288,7 @@ function TimeDropdown({
         </button>
 
         <div
-          className={`absolute left-0 right-0 z-50 top-full mt-2 rounded-2xl border border-[#4b164c]/10 bg-white shadow-[0_20px_60px_rgba(75,22,76,0.15)] transition-all duration-200 ${open
+          className={`absolute left-0 right-0 z-50 top-full mt-3 rounded-2xl border border-[#4b164c]/10 bg-white shadow-[0_20px_60px_rgba(75,22,76,0.15)] transition-all duration-200 ${open
               ? "opacity-100 translate-y-0 pointer-events-auto"
               : "opacity-0 -translate-y-1 pointer-events-none"
             }`}
@@ -444,7 +444,7 @@ function DateDropdown({
 
         <div
           ref={panelRef}
-          className={`absolute top-full left-0 z-50 mt-2 w-72 rounded-2xl border border-[#4b164c]/10 bg-white p-4 shadow-[0_20px_60px_rgba(75,22,76,0.15)] transition-all duration-200 ${open
+          className={`absolute top-full left-0 z-50 mt-3 w-72 rounded-2xl border border-[#4b164c]/10 bg-white p-4 shadow-[0_20px_60px_rgba(75,22,76,0.15)] transition-all duration-200 ${open
               ? "opacity-100 translate-y-0 pointer-events-auto"
               : "opacity-0 -translate-y-2 pointer-events-none"
             }`}
@@ -625,19 +625,19 @@ function BookingForm() {
               <form className="glass-strong rounded-3xl p-5 shadow-[0_24px_80px_rgba(75,22,76,0.12)] md:p-8">
                 {selectedSummary.length > 0 && (
                   <div className="mb-6 rounded-2xl border border-[#bc5eff]/20 bg-[#f8e7f6]/70 p-4">
-                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#bc5eff]">
+                    <p className="text-xs font-bold uppercase tracking-[0.20em] text-[#bc5eff]">
                       Selected from pricing Pricing
                     </p>
-                    <p className="mt-2 text-sm font-semibold text-[#4b164c]">
+                    <p className="mt-3 text-sm font-semibold text-[#4b164c]">
                       {selectedSummary.join(" → ")}
                     </p>
                   </div>
                 )}
 
-                <div className="grid gap-5 md:grid-cols-2">
-                  <label className="space-y-2">
+                <div className="grid gap-4 md:grid-cols-4">
+                  <label className="space-y-4">
                     <span className="text-sm font-bold text-[#4b164c]">Full Name</span>
-                    <input
+                    <input 
                       name="fullName"
                       type="text"
                       required
@@ -716,7 +716,7 @@ function BookingForm() {
                     <p className="text-sm font-bold text-[#4b164c]">
                       Production Services
                     </p>
-                    <div className="mt-3 flex flex-wrap gap-2">
+                    <div className="mt-2 flex flex-wrap gap-2">
                       {productionServices.map((service) => {
                         const active = productionSelection.includes(service.value);
                         return (
@@ -786,7 +786,7 @@ function BookingForm() {
 
                 <button
                   type="submit"
-                  className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#bc5eff] px-8 py-4 text-sm font-bold text-white transition-transform hover:scale-[1.01] md:w-auto"
+                  className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 font-bold text-white transition-transform hover:bg-primary/90 md:w-auto"
                 >
                   Submit Booking Details
                   <Send className="h-4 w-4" />
