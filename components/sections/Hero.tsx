@@ -27,7 +27,7 @@ const heroSlides = [
 
 ];
 
-const rotatingWords = ["Timeless", "Elegant", "Sacred", "Grand"];
+const rotatingWords = ["Timeless", "Elegant", "Traditional", "Premier"];   
 
 export function Hero() {
   const [current, setCurrent] = useState(0);
@@ -96,7 +96,7 @@ export function Hero() {
     </SectionLabel> */}
           </div>
           <h1 className="text-4xl font-bold leading-tight text-white md:text-6xl lg:text-7xl">
-            We Craft{" "}
+            Thoothukudi's{" "}
             <span className="relative inline-block font-serif italic">
               <AnimatePresence mode="wait">
                 <motion.span
@@ -112,7 +112,8 @@ export function Hero() {
                 </motion.span>
               </AnimatePresence>
             </span>{" "}
-            Celebrations
+            <br></br>
+            Event Decorators
           </h1>
         </AnimatedReveal>
 

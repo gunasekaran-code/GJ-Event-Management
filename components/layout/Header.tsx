@@ -100,17 +100,17 @@ export function Header() {
             <Image
               src="/logo.png"
               alt="GJ Decoration logo"
-              width={56}
-              height={56}
+              width={50}
+              height={50}
               loading="eager"
               className="rounded-lg md:w-[50px] md:h-[50px]"
               style={{ height: "auto" }}
             />
             <div>
-              <p className="text-sm md:text-2xl font-bold leading-tight" style={{ color: "#4b164c" }}>
+              <p className="text-[14px] md:text-2xl font-bold leading-tight" style={{ color: "#4b164c" }}>
                 GJ Decoration
               </p>
-              <p className="text-[8px] md:text-[11px] font-bold uppercase tracking-wider leading-tight" style={{ color: "#4b164c99" }}>
+              <p className="text-[8px] md:text-[11px] font-bold uppercase tracking-wider leading-tight" style={{ color: "#d28effea" }}>
                 Event Management
               </p>
             </div>
@@ -120,9 +120,9 @@ export function Header() {
           <nav className="hidden md:flex items-center gap-7">
             {[
               { label: "Home", href: "/#home" },
+              { label: "About", href: "/#about" },
+              { label: "Services", href: "/Pricing" },
               { label: "Portfolio", href: "/#portfolio" },
-              { label: "Services", href: "/#services" },
-              { label: "Pricing", href: "/Pricing" },
               { label: "Contact", href: "/Contact" },
             ].map(({ label, href }) => (
               <Link key={label} href={href} className="nav-link text-sm font-bold pb-0.5">
@@ -137,7 +137,7 @@ export function Header() {
             {/* Call button */}
             <a
               href={`tel:${siteConfig.phone}`}
-              className="btn-call flex items-center justify-center gap-2 rounded-full px-3.5 py-2.5 md:px-5 md:py-2.5 text-xs md:text-sm font-bold text-white"
+              className="btn-shine flex items-center justify-center gap-2 rounded-full px-3.5 py-2.5 md:px-5 md:py-2.5 text-xs md:text-sm font-bold text-white"
             >
               <Phone className="h-3.5 w-3.5 md:h-4 md:w-4 shrink-0" />
               <span className="hidden md:inline">{siteConfig.phoneDisplay}</span>
@@ -146,7 +146,7 @@ export function Header() {
             {/* Book Now — shining */}
             <Link
               href="/Booking"
-              className="btn-shine flex items-center gap-1.5 rounded-full px-3 py-2.5 md:px-5 md:py-2.5 text-xs md:text-sm font-bold text-white whitespace-nowrap"
+              className="btn-shine flex items-center gap-1.5 rounded-full px-2.5 py-2.5 md:px-5 md:py-2.5 text-xs md:text-sm font-bold text-white whitespace-nowrap"
             >
               Book Now
             </Link>

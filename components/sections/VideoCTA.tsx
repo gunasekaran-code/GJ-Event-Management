@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/content";
 
 export function VideoCTA() {
   return (
-    <section className="relative h-screen overflow-hidden">
+    <section id="about" className="relative h-screen overflow-hidden">
       {/* Fullscreen pinned YouTube background */}
       <div className="fixed inset-0 w-full h-full pointer-events-none -z-10">
         <iframe

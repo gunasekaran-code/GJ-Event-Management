@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
@@ -25,10 +24,10 @@ export function Services() {
             {services.map((service, index) => {
               const isActive = index === active;
               return (
-                <button
+                <div
                   key={service.id}
-                  onClick={() => setActive(index)}
-                  className="group w-full text-left"
+                  onMouseEnter={() => setActive(index)}
+                  className="group w-full text-left cursor-default"
                 >
                   <div className="flex items-start gap-4 py-4">
                     <div
@@ -83,7 +82,7 @@ export function Services() {
                       </AnimatePresence>
                     </div>
                   </div>
-                </button>
+                </div>
               );
             })}
           </div>

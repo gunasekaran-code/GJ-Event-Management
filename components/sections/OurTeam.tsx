@@ -101,10 +101,10 @@ export function OurTeam() {
             The people behind{" "}
             <span className="font-serif italic text-primary">every detail</span>
           </h2>
-          <p className="mt-5 max-w-xl text-primary/60">
+          {/* <p className="mt-5 max-w-xl text-primary/60">
             From first sketch to final setup, each part of the team keeps your
             celebration polished, practical, and personal.
-          </p>
+          </p> */}
         </div>
 
         {/* ✅ FIX: Removed pb-[8vh] which was causing the last card to hang in a "dead scroll" zone.

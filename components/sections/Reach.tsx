@@ -7,7 +7,7 @@ import { AnimatedReveal } from "@/components/ui/AnimatedReveal";
 
 export function Reach() {
   return (
-    <section id="about" aria-labelledby="reach-heading" className="scroll-mt-24 bg-white py-20 md:py-28">
+    <section id="Reach" aria-labelledby="reach-heading" className="scroll-mt-24 bg-white py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <div className="grid gap-16 lg:grid-cols-2">
           <AnimatedReveal>

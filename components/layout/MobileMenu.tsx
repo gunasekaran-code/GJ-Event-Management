@@ -18,7 +18,7 @@ export function MobileMenu({ open, onClose, links }: MobileMenuProps) {
       {/* Fix 1: Separate the conditionals and add unique keys */}
       {open && (
         <motion.div
-          key="mobile-backdrop" // 👈 Added Key
+          key="mobile-backdrop" 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
