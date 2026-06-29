@@ -100,8 +100,8 @@ export function Header() {
             <Image
               src="/logo.png"
               alt="GJ Decoration logo"
-              width={36}
-              height={36}
+              width={56}
+              height={56}
               loading="eager"
               className="rounded-lg md:w-[50px] md:h-[50px]"
               style={{ height: "auto" }}
@@ -137,7 +137,7 @@ export function Header() {
             {/* Call button */}
             <a
               href={`tel:${siteConfig.phone}`}
-              className="btn-call flex items-center justify-center gap-2 rounded-full px-3 py-1.5 md:px-5 md:py-2.5 text-xs md:text-sm font-bold text-white"
+              className="btn-call flex items-center justify-center gap-2 rounded-full px-3.5 py-2.5 md:px-5 md:py-2.5 text-xs md:text-sm font-bold text-white"
             >
               <Phone className="h-3.5 w-3.5 md:h-4 md:w-4 shrink-0" />
               <span className="hidden md:inline">{siteConfig.phoneDisplay}</span>
@@ -146,7 +146,7 @@ export function Header() {
             {/* Book Now — shining */}
             <Link
               href="/Booking"
-              className="btn-shine flex items-center gap-1.5 rounded-full px-3 py-1.5 md:px-5 md:py-2.5 text-xs md:text-sm font-bold text-white whitespace-nowrap"
+              className="btn-shine flex items-center gap-1.5 rounded-full px-3 py-2.5 md:px-5 md:py-2.5 text-xs md:text-sm font-bold text-white whitespace-nowrap"
             >
               Book Now
             </Link>

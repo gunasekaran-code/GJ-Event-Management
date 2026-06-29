@@ -29,7 +29,7 @@ export const navLinks = [
   { label: "Team", href: "/#team" },
   { label: "Portfolio", href: "/#portfolio" },
   { label: "Clients", href: "/#clients" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/Contact" },
 ];
 
 export type PricingItem = {
@@ -447,42 +447,42 @@ export const locations = [
   {
     city: "Thoothukudi",
     region: "Headquarters · Tamil Nadu",
-    href: "#contact",
+    href: "/Contact",
   },
   {
     city: "Tirunelveli",
     region: "Tamil Nadu",
-    href: "#contact",
+    href: "/Contact",
   },
   {
     city: "Madurai",
     region: "Tamil Nadu",
-    href: "#contact",
+    href: "/Contact",
   },
   {
     city: "Chennai",
     region: "Tamil Nadu",
-    href: "#contact",
+    href: "/Contact",
   },
   {
     city: "Nagercoil",
     region: "Tamil Nadu",
-    href: "#contact",
+    href: "/Contact",
   },
   {
     city: "Ramanathapuram",
     region: "Tamil Nadu",
-    href: "#contact",
+    href: "/Contact",
   },
   {
     city: "Virudhunagar",
     region: "Tamil Nadu",
-    href: "#contact",
+    href: "/Contact",
   },
   {
     city: "Kanyakumari",
     region: "Tamil Nadu",
-    href: "#contact",
+    href: "/Contact",
   },
 ];
 
