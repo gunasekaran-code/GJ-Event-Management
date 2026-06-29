@@ -39,14 +39,14 @@ const contactDetails = [
         icon: MapPin,
         label: "Location",
         value: "Thoothukudi, Tamil Nadu",
-        href: "https://maps.google.com/?q=Thoothukudi,Tamil+Nadu",
+        href: "https://www.google.com/maps?client=safari&rls=en&oe=UTF-8&dlnr=1&um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=KV3wIN0a-wM7MZCfXMaYc-ZH&daddr=Anna+nagar+3rd+Street+10/54/5+Tசவேரியார்புரம்+தாளமுத்துநகர்+ரோடு,+பின்புறம்,+Marakkadai,+Thoothukudi,+Tamil+Nadu+628008",
         sub: "Serving all of Tamil Nadu",
     },
     {
         icon: Clock,
         label: "Working Hours",
         value: "8:00 AM – 9:00 PM",
-        href: "https://maps.google.com/?q=Thoothukudi,Tamil+Nadu",
+        href: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.4286695286284!2d78.13026027585522!3d8.803788191248744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b03fb1add20f05d%3A0x47e67398c65c9f90!2sGj%20event%20management!5e0!3m2!1sen!2sin!4v1719390000000!5m2!1sen!2sin",
         sub: "Available 7 days a week",
     },
 ];
@@ -93,9 +93,21 @@ export default function ContactPage() {
         e.preventDefault();
         if (!form.name || !form.phone) return;
         setLoading(true);
-        await new Promise((r) => setTimeout(r, 1200));
-        setLoading(false);
-        setSubmitted(true);
+
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(form),
+            });
+
+            if (!res.ok) throw new Error("Failed");
+            setSubmitted(true);
+        } catch {
+            alert("Something went wrong. Please try again.");
+        } finally {
+            setLoading(false);
+        }
     }
 
     return (
@@ -294,8 +306,8 @@ export default function ContactPage() {
                                                                 type="button"
                                                                 onClick={() => selectEvent(type)}
                                                                 className={`rounded-full px-4 py-1.5 text-xs font-bold transition-all duration-200 ${form.eventType === type
-                                                                        ? "bg-[#4b164c] text-white shadow-[0_4px_14px_rgba(75,22,76,0.3)]"
-                                                                        : "border border-[#4b164c]/15 bg-white text-[#4b164c] hover:border-[#bc5eff]/40 hover:text-[#bc5eff]"
+                                                                    ? "bg-[#4b164c] text-white shadow-[0_4px_14px_rgba(75,22,76,0.3)]"
+                                                                    : "border border-[#4b164c]/15 bg-white text-[#4b164c] hover:border-[#bc5eff]/40 hover:text-[#bc5eff]"
                                                                     }`}
                                                             >
                                                                 {type}
@@ -344,10 +356,10 @@ export default function ContactPage() {
                                 <div className="flex flex-col gap-6 h-full">
 
                                     {/* Map embed */}
-                                    <div className="overflow-hidden rounded-3xl border border-[#4b164c]/10 shadow-[0_12px_40px_rgba(75,22,76,0.06)] flex-1 min-h-[280px]">
+                                    <div className="overflow-hidden rounded-3xl border-2 border-[#8A2BE2] bg-[#E6E6FA] shadow-[0_12px_40px_rgba(138,43,226,0.15)] flex-1 min-h-[280px]">
                                         <iframe
                                             title="GJ Decoration Location"
-                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62968.24!2d78.1348!3d8.7642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b03ef3d5d3b1c77%3A0x1!2sThoothukudi%2C+Tamil+Nadu!5e0!3m2!1sen!2sin!4v1"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.4286695286284!2d78.13026027585522!3d8.803788191248744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b03fb1add20f05d%3A0x47e67398c65c9f90!2sGj%20event%20management!5e0!3m2!1sen!2sin!4v1719390000000!5m2!1sen!2sin"
                                             width="100%"
                                             height="100%"
                                             style={{ border: 0, minHeight: 280 }}
