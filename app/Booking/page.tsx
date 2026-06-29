@@ -188,8 +188,8 @@ function CustomDropdown({
         {/* Outer: animation wrapper configured for up/down directions */}
         <div
           className={`absolute left-0 right-0 z-50 ${placementClass} rounded-2xl border border-[#4b164c]/10 bg-white shadow-[0_20px_60px_rgba(75,22,76,0.15)] transition-all duration-200 ${open
-              ? "opacity-100 translate-y-0 pointer-events-auto"
-              : `opacity-0 ${closedTransformClass} pointer-events-none`
+            ? "opacity-100 translate-y-0 pointer-events-auto"
+            : `opacity-0 ${closedTransformClass} pointer-events-none`
             }`}
         >
           {/* Inner: scroll container — ref used by hook */}
@@ -207,8 +207,8 @@ function CustomDropdown({
                   setOpen(false);
                 }}
                 className={`w-full px-4 py-3 text-left text-sm font-semibold transition-colors duration-150 ${opt.value === value
-                    ? "bg-[#bc5eff]/10 text-[#bc5eff]"
-                    : "text-[#4b164c] hover:bg-[#f8e7f6] hover:text-[#4b164c]"
+                  ? "bg-[#bc5eff]/10 text-[#bc5eff]"
+                  : "text-[#4b164c] hover:bg-[#f8e7f6] hover:text-[#4b164c]"
                   }`}
               >
                 {opt.label}
@@ -289,8 +289,8 @@ function TimeDropdown({
 
         <div
           className={`absolute left-0 right-0 z-50 top-full mt-3 rounded-2xl border border-[#4b164c]/10 bg-white shadow-[0_20px_60px_rgba(75,22,76,0.15)] transition-all duration-200 ${open
-              ? "opacity-100 translate-y-0 pointer-events-auto"
-              : "opacity-0 -translate-y-1 pointer-events-none"
+            ? "opacity-100 translate-y-0 pointer-events-auto"
+            : "opacity-0 -translate-y-1 pointer-events-none"
             }`}
         >
           <div
@@ -313,8 +313,8 @@ function TimeDropdown({
                       setOpen(false);
                     }}
                     className={`w-full px-6 py-2.5 text-left text-sm font-semibold transition-colors duration-150 ${slot.value === value
-                        ? "bg-[#bc5eff]/10 text-[#bc5eff]"
-                        : "text-[#4b164c] hover:bg-[#f8e7f6]"
+                      ? "bg-[#bc5eff]/10 text-[#bc5eff]"
+                      : "text-[#4b164c] hover:bg-[#f8e7f6]"
                       }`}
                   >
                     {slot.label}
@@ -445,8 +445,8 @@ function DateDropdown({
         <div
           ref={panelRef}
           className={`absolute top-full left-0 z-50 mt-3 w-72 rounded-2xl border border-[#4b164c]/10 bg-white p-4 shadow-[0_20px_60px_rgba(75,22,76,0.15)] transition-all duration-200 ${open
-              ? "opacity-100 translate-y-0 pointer-events-auto"
-              : "opacity-0 -translate-y-2 pointer-events-none"
+            ? "opacity-100 translate-y-0 pointer-events-auto"
+            : "opacity-0 -translate-y-2 pointer-events-none"
             }`}
         >
           {/* Month nav */}
@@ -491,10 +491,10 @@ function DateDropdown({
                   disabled={isPast(day)}
                   onClick={() => selectDay(day)}
                   className={`mx-auto flex h-8 w-8 items-center justify-center rounded-full text-sm font-semibold transition-all duration-150 ${isSelected(day)
-                      ? "bg-[#bc5eff] text-white shadow-[0_4px_14px_rgba(188,94,255,0.4)]"
-                      : isPast(day)
-                        ? "cursor-not-allowed text-[#4b164c]/20"
-                        : "text-[#4b164c] hover:bg-[#f8e7f6] hover:text-[#4b164c]"
+                    ? "bg-[#bc5eff] text-white shadow-[0_4px_14px_rgba(188,94,255,0.4)]"
+                    : isPast(day)
+                      ? "cursor-not-allowed text-[#4b164c]/20"
+                      : "text-[#4b164c] hover:bg-[#f8e7f6] hover:text-[#4b164c]"
                     }`}
                 >
                   {day}
@@ -516,6 +516,8 @@ function BookingForm() {
   const [guestCount, setGuestCount] = useState("");
   const [startTime, setStartTime] = useState("");
   const [eventDate, setEventDate] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
   const [productionSelection, setProductionSelection] = useState<string[]>([]);
   const [equipmentSelection, setEquipmentSelection] = useState<string[]>([]);
   const [selectionOrder, setSelectionOrder] = useState<string[]>([]);
@@ -551,10 +553,10 @@ function BookingForm() {
     selectionOrder.length > 0
       ? selectionOrder
       : [
-          ...(eventType ? [eventType] : []),
-          ...productionSelection,
-          ...equipmentSelection,
-        ];
+        ...(eventType ? [eventType] : []),
+        ...productionSelection,
+        ...equipmentSelection,
+      ];
 
   return (
     <>
@@ -622,7 +624,39 @@ function BookingForm() {
               </div>
 
               {/* Form */}
-              <form className="glass-strong rounded-3xl p-5 shadow-[0_24px_80px_rgba(75,22,76,0.12)] md:p-8">
+              <form
+                onSubmit={async (e) => {
+                  e.preventDefault();
+                  const data = new FormData(e.currentTarget);
+                  setLoading(true);
+                  try {
+                    const res = await fetch("/api/booking", {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({
+                        fullName: data.get("fullName"),
+                        phone: data.get("phone"),
+                        venue: data.get("venue"),
+                        duration: data.get("duration"),
+                        eventDate,
+                        startTime,
+                        eventType,
+                        guestCount,
+                        productionServices: productionSelection.join(", "),
+                        equipmentServices: equipmentSelection.join(", "),
+                        selectedPackages: selectedSummary.join(" → "),
+                      }),
+                    });
+                    if (!res.ok) throw new Error();
+                    setSubmitted(true);
+                  } catch {
+                    alert("Something went wrong. Please try again.");
+                  } finally {
+                    setLoading(false);
+                  }
+                }}
+                className="glass-strong rounded-3xl p-5 shadow-[0_24px_80px_rgba(75,22,76,0.12)] md:p-8"
+              >
                 {selectedSummary.length > 0 && (
                   <div className="mb-6 rounded-2xl border border-[#bc5eff]/20 bg-[#f8e7f6]/70 p-4">
                     <p className="text-xs font-bold uppercase tracking-[0.20em] text-[#bc5eff]">
@@ -637,7 +671,7 @@ function BookingForm() {
                 <div className="grid gap-4 md:grid-cols-4">
                   <label className="space-y-4">
                     <span className="text-sm font-bold text-[#4b164c]">Full Name</span>
-                    <input 
+                    <input
                       name="fullName"
                       type="text"
                       required
@@ -724,11 +758,10 @@ function BookingForm() {
                             key={service.value}
                             type="button"
                             onClick={() => toggleProduction(service.value)}
-                            className={`rounded-full border px-4 py-2 text-sm font-semibold transition-all duration-200 ${
-                              active
-                                ? "border-[#bc5eff] bg-[#bc5eff]/10 text-[#bc5eff] shadow-[0_8px_24px_rgba(188,94,255,0.15)]"
-                                : "border-[#4b164c]/10 bg-white text-[#4b164c]/70 hover:border-[#bc5eff]/40 hover:text-[#4b164c]"
-                            }`}
+                            className={`rounded-full border px-4 py-2 text-sm font-semibold transition-all duration-200 ${active
+                              ? "border-[#bc5eff] bg-[#bc5eff]/10 text-[#bc5eff] shadow-[0_8px_24px_rgba(188,94,255,0.15)]"
+                              : "border-[#4b164c]/10 bg-white text-[#4b164c]/70 hover:border-[#bc5eff]/40 hover:text-[#4b164c]"
+                              }`}
                           >
                             {service.label}
                           </button>
@@ -749,11 +782,10 @@ function BookingForm() {
                             key={service.value}
                             type="button"
                             onClick={() => toggleEquipment(service.value)}
-                            className={`rounded-full border px-4 py-2 text-sm font-semibold transition-all duration-200 ${
-                              active
-                                ? "border-[#bc5eff] bg-[#bc5eff]/10 text-[#bc5eff] shadow-[0_8px_24px_rgba(188,94,255,0.15)]"
-                                : "border-[#4b164c]/10 bg-white text-[#4b164c]/70 hover:border-[#bc5eff]/40 hover:text-[#4b164c]"
-                            }`}
+                            className={`rounded-full border px-4 py-2 text-sm font-semibold transition-all duration-200 ${active
+                              ? "border-[#bc5eff] bg-[#bc5eff]/10 text-[#bc5eff] shadow-[0_8px_24px_rgba(188,94,255,0.15)]"
+                              : "border-[#4b164c]/10 bg-white text-[#4b164c]/70 hover:border-[#bc5eff]/40 hover:text-[#4b164c]"
+                              }`}
                           >
                             {service.label}
                           </button>
@@ -786,17 +818,25 @@ function BookingForm() {
 
                 <button
                   type="submit"
-                  className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 font-bold text-white transition-transform hover:bg-primary/90 md:w-auto"
+                  disabled={loading}
+                  className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 font-bold text-white transition-transform hover:bg-primary/90 disabled:opacity-60 md:w-auto"
                 >
-                  Submit Booking Details
-                  <Send className="h-4 w-4" />
+                  {loading ? (
+                    <span className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
+                  ) : (
+                    <Send className="h-4 w-4" />
+                  )}
+                  {loading ? "Submitting…" : "Submit Booking Details"}
                 </button>
+
+                {submitted && (
+                  <div className="mt-6 rounded-2xl border border-[#bc5eff]/20 bg-[#f8e7f6] p-4 text-center">
+                    <p className="font-bold text-[#4b164c]">Booking request sent!</p>
+                    <p className="mt-1 text-sm text-[#4b164c]/60">We'll contact you shortly on {`the number provided`}.</p>
+                  </div>
+                )}
               </form>
             </div>
-
-
-
-
           </div>
         </section>
       </main>
