@@ -118,17 +118,13 @@ export function Header() {
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-7">
-            {[
-              { label: "Home", href: "/#home" },
-              { label: "About", href: "/#about" },
-              { label: "Services", href: "/Pricing" },
-              { label: "Portfolio", href: "/#portfolio" },
-              { label: "Contact", href: "/Contact" },
-            ].map(({ label, href }) => (
-              <Link key={label} href={href} className="nav-link text-sm font-bold pb-0.5">
-                {label}
-              </Link>
-            ))}
+            {navLinks
+              .filter(({ label }) => label !== "Book Now")
+              .map(({ label, href }) => (
+                <Link key={href} href={href} className="nav-link text-sm font-bold pb-0.5">
+                  {label}
+                </Link>
+              ))}
           </nav>
 
           {/* Right side */}

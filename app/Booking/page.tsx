@@ -668,132 +668,142 @@ function BookingForm() {
                   </div>
                 )}
 
-                <div className="grid gap-4 md:grid-cols-4">
-                  <label className="space-y-4">
-                    <span className="text-sm font-bold text-[#4b164c]">Full Name</span>
-                    <input
-                      name="fullName"
-                      type="text"
-                      required
-                      className={fieldBase}
-                      placeholder="Your name"
-                    />
-                  </label>
+                {/* Main Form Grid Container */}
+<div className="mt-5 grid gap-5 md:grid-cols-2">
+  
+  {/* Full Name */}
+  <label className="flex flex-col space-y-2">
+    <span className="text-sm font-bold text-[#4b164c]">Full Name</span>
+    <input
+      name="fullName"
+      type="text"
+      required
+      className={fieldBase}
+      placeholder="Your name"
+    />
+  </label>
 
-                  <label className="space-y-2">
-                    <span className="text-sm font-bold text-[#4b164c]">Venue / Location</span>
-                    <input
-                      name="venue"
-                      type="text"
-                      required
-                      className={fieldBase}
-                      placeholder="Venue name, city, or area"
-                    />
-                  </label>
+  {/* Venue / Location */}
+  <label className="flex flex-col space-y-2">
+    <span className="text-sm font-bold text-[#4b164c]">Venue / Location</span>
+    <input
+      name="venue"
+      type="text"
+      required
+      className={fieldBase}
+      placeholder="Venue name, city, or area"
+    />
+  </label>
 
-                  <label className="space-y-2">
-                    <span className="text-sm font-bold text-[#4b164c]">Phone Number</span>
-                    <input
-                      name="phone"
-                      type="tel"
-                      required
-                      className={fieldBase}
-                      placeholder="+91 98765 43210"
-                    />
-                  </label>
+  {/* Phone Number */}
+  <label className="flex flex-col space-y-2">
+    <span className="text-sm font-bold text-[#4b164c]">Phone Number</span>
+    <input
+      name="phone"
+      type="tel"
+      required
+      className={fieldBase}
+      placeholder="+91 98765 43210"
+    />
+  </label>
 
-                  <DateDropdown value={eventDate} onChange={setEventDate} />
-                </div>
+  {/* Date Dropdown */}
+  <DateDropdown value={eventDate} onChange={setEventDate} />
 
-                <div className="mt-6 grid gap-5 md:grid-cols-2">
-                  <TimeDropdown value={startTime} onChange={setStartTime} />
+  {/* Time Dropdown */}
+  <TimeDropdown value={startTime} onChange={setStartTime} />
 
-                  <label className="space-y-2">
-                    <span className="text-sm font-bold text-[#4b164c]">
-                      Estimated Duration / End Time
-                    </span>
-                    <input
-                      name="duration"
-                      type="text"
-                      className={fieldBase}
-                      placeholder="Example: 6 hours or ends by 10 PM"
-                    />
-                  </label>
-                </div>
+  {/* Estimated Duration */}
+  <label className="flex flex-col space-y-2">
+    <span className="text-sm font-bold text-[#4b164c]">
+      Estimated Duration / End Time
+    </span>
+    <input
+      name="duration"
+      type="text"
+      className={fieldBase}
+      placeholder="Example: 6 hours or ends by 10 PM"
+    />
+  </label>
+</div>
 
-                <div className="mt-8 border-t border-[#4b164c]/10 pt-6">
-                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#bc5eff]">
-                    Event Profile
-                  </p>
+{/* Event Profile Section */}
+<div className="mt-8 border-t border-[#4b164c]/10 pt-6">
+  <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#bc5eff] mb-5">
+    Event Profile
+  </p>
 
-                  <div className="mt-5 grid gap-5 md:grid-cols-2">
-                    <CustomDropdown
-                      label="Event Type"
-                      placeholder="Select event type"
-                      options={eventTypes}
-                      value={eventType}
-                      onChange={setEventType}
-                      direction="up" // <-- Added prop here to open upwards
-                    />
+  {/* Event Profile Grid */}
+  <div className="grid gap-5 md:grid-cols-2">
+    <CustomDropdown
+      label="Event Type"
+      placeholder="Select event type"
+      options={eventTypes}
+      value={eventType}
+      onChange={setEventType}
+      direction="up" 
+    />
 
-                    <CustomDropdown
-                      label="Estimated Guest Count"
-                      placeholder="Select guest range"
-                      options={guestCounts}
-                      value={guestCount}
-                      onChange={setGuestCount}
-                      direction="up"
-                    />
-                  </div>
+    <CustomDropdown
+      label="Estimated Guest Count"
+      placeholder="Select guest range"
+      options={guestCounts}
+      value={guestCount}
+      onChange={setGuestCount}
+      direction="up"
+    />
 
-                  <div className="md:col-span-2">
-                    <p className="text-sm font-bold text-[#4b164c]">
-                      Production Services
-                    </p>
-                    <div className="mt-2 flex flex-wrap gap-2">
-                      {productionServices.map((service) => {
-                        const active = productionSelection.includes(service.value);
-                        return (
-                          <button
-                            key={service.value}
-                            type="button"
-                            onClick={() => toggleProduction(service.value)}
-                            className={`rounded-full border px-4 py-2 text-sm font-semibold transition-all duration-200 ${active
-                              ? "border-[#bc5eff] bg-[#bc5eff]/10 text-[#bc5eff] shadow-[0_8px_24px_rgba(188,94,255,0.15)]"
-                              : "border-[#4b164c]/10 bg-white text-[#4b164c]/70 hover:border-[#bc5eff]/40 hover:text-[#4b164c]"
-                              }`}
-                          >
-                            {service.label}
-                          </button>
-                        );
-                      })}
-                    </div>
-                  </div>
+    {/* Production Services (Spans full width on desktop) */}
+    <div className="md:col-span-2 mt-2">
+      <p className="text-sm font-bold text-[#4b164c]">
+        Production Services
+      </p>
+      <div className="mt-2 flex flex-wrap gap-2">
+        {productionServices.map((service) => {
+          const active = productionSelection.includes(service.value);
+          return (
+            <button
+              key={service.value}
+              type="button"
+              onClick={() => toggleProduction(service.value)}
+              className={`rounded-full border px-4 py-2 text-sm font-semibold transition-all duration-200 ${active
+                ? "border-[#bc5eff] bg-[#bc5eff]/10 text-[#bc5eff] shadow-[0_8px_24px_rgba(188,94,255,0.15)]"
+                : "border-[#4b164c]/10 bg-white text-[#4b164c]/70 hover:border-[#bc5eff]/40 hover:text-[#4b164c]"
+                }`}
+            >
+              {service.label}
+            </button>
+          );
+        })}
+      </div>
+    </div>
 
-                  <div className="md:col-span-2">
-                    <p className="text-sm font-bold text-[#4b164c]">
-                      Equipment & Setup
-                    </p>
-                    <div className="mt-3 flex flex-wrap gap-2">
-                      {equipmentServices.map((service) => {
-                        const active = equipmentSelection.includes(service.value);
-                        return (
-                          <button
-                            key={service.value}
-                            type="button"
-                            onClick={() => toggleEquipment(service.value)}
-                            className={`rounded-full border px-4 py-2 text-sm font-semibold transition-all duration-200 ${active
-                              ? "border-[#bc5eff] bg-[#bc5eff]/10 text-[#bc5eff] shadow-[0_8px_24px_rgba(188,94,255,0.15)]"
-                              : "border-[#4b164c]/10 bg-white text-[#4b164c]/70 hover:border-[#bc5eff]/40 hover:text-[#4b164c]"
-                              }`}
-                          >
-                            {service.label}
-                          </button>
-                        );
-                      })}
-                    </div>
-                  </div>
-                </div>
+    {/* Equipment & Setup (Spans full width on desktop) */}
+    <div className="md:col-span-2 mt-2">
+      <p className="text-sm font-bold text-[#4b164c]">
+        Equipment & Setup
+      </p>
+      <div className="mt-3 flex flex-wrap gap-2">
+        {equipmentServices.map((service) => {
+          const active = equipmentSelection.includes(service.value);
+          return (
+            <button
+              key={service.value}
+              type="button"
+              onClick={() => toggleEquipment(service.value)}
+              className={`rounded-full border px-4 py-2 text-sm font-semibold transition-all duration-200 ${active
+                ? "border-[#bc5eff] bg-[#bc5eff]/10 text-[#bc5eff] shadow-[0_8px_24px_rgba(188,94,255,0.15)]"
+                : "border-[#4b164c]/10 bg-white text-[#4b164c]/70 hover:border-[#bc5eff]/40 hover:text-[#4b164c]"
+                }`}
+            >
+              {service.label}
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  </div>
+</div>
 
                 {/* Hidden fields */}
                 <input type="hidden" name="eventType" value={eventType} />

@@ -21,10 +21,11 @@ export const siteConfig = {
   },
 };
 
-export const navLinks = [
+export const navLinks: { label: string; href: string }[] = [
   { label: "Home", href: "/#home" },
   { label: "About", href: "/#about" },
   { label: "Services", href: "/Pricing" },
+  { label: "Mehendi", href: "/Makeover" },
   { label: "Book Now", href: "/Booking" },
   { label: "Portfolio", href: "/#portfolio" },
   { label: "Contact", href: "/Contact" },
