@@ -10,50 +10,7 @@ import { ScrollToTop } from "@/components/layout/ScrollToTop";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { AnimatedReveal } from "@/components/ui/AnimatedReveal";
 import { siteConfig } from "@/lib/content";
-
-const mehandiPackages = [
-  {
-    title: "Bridal Makeover",
-    price: "Starting ₹15,000",
-    description:
-      "Full hand and feet intricate bridal designs with fine detailing, customised to your theme.",
-    features: ["Both hands & feet", "Groom design included", "4–6 hrs session", "Trial session"],
-  },
-  {
-    title: "Guest / Party Makeover",
-    price: "Starting ₹300 / person",
-    description:
-      "Quick, elegant designs for wedding guests, sangeet nights, or festive gatherings.",
-    features: ["Front hand design", "10–15 min per guest", "Multiple artists available"],
-  },
-  {
-    title: "Festival Makeover",
-    price: "Starting ₹2,500",
-    description:
-      "Traditional and modern motifs for Eid, Diwali, or any celebratory occasion.",
-    features: ["Both hands", "Custom motif selection", "1–2 hrs session"],
-  },
-];
-
-const heroStats = [
-  { value: "45 min", label: "AVG. SESSION TIME" },
-  { value: "500+", label: "5-STAR REVIEWS" },
-  { value: "₹300", label: "STARTING PRICE" },
-  { value: "6 yrs", label: "IN BUSINESS" },
-];
-
-const glamServices = [
-  "HD Makeup",
-  "Glass Skin Makeup",
-  "Airbrush Makeup",
-  "Skin Finish Look",
-  "Basic Makeup",
-];
-
-const glamAudience = [
-  "To bride, groom, bridesmaids and all",
-  "For wedding, reception, all events",
-];
+import { mehandiPackages, heroStats, glamServices, glamAudience } from "@/lib/makeover";
 
 export default function MehandiPage() {
   return (
@@ -166,80 +123,84 @@ export default function MehandiPage() {
 
         {/* Jen Glam Makeover — artist spotlight */}
         <AnimatedReveal>
-          <section className="mx-auto max-w-7xl px-5 py-14 md:px-6 md:py-20">
-            <div className="flex justify-center text-sm">
-              <SectionLabel>Meet the Artist</SectionLabel>
-            </div>
-            <h2 className="mt-5 text-center text-3xl font-bold text-[#4b164c] md:text-5xl">
-              Jen Glam{" "}
-              <span className="font-serif italic text-[#bc5eff]">Makeover</span>
-            </h2>
-            <p className="mx-auto mt-4 max-w-xl text-center text-sm font-bold uppercase tracking-[0.15em] text-[#bc5eff]">
-              Enhancing beauty, elevating confidence
-            </p>
+          {/* Full-width container that handles the edge-to-edge white background */}
+          <div className="w-full bg-white">
+            {/* Centered content wrapper */}
+            <section className="mx-auto max-w-7xl px-5 py-14 md:px-6 md:py-20">
+              <div className="flex justify-center text-sm">
+                <SectionLabel>Meet the Artist</SectionLabel>
+              </div>
+              {/* Fixed the accidental space inside text-[ #4b164c] 👇 */}
+              <h2 className="mt-5 text-center text-3xl font-bold text-[#4b164c] md:text-5xl">
+                Jen Glam{" "}
+                <span className="font-serif italic text-[#bc5eff]">Makeover</span>
+              </h2>
+              <p className="mx-auto mt-4 max-w-xl text-center text-sm font-bold uppercase tracking-[0.15em] text-[#bc5eff]">
+                Enhancing beauty, elevating confidence
+              </p>
 
-            <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_1.2fr]">
-              {/* Services */}
-              <div className="glass-strong rounded-3xl p-6 shadow-[0_20px_60px_rgba(75,22,76,0.10)] sm:p-8">
-                <h3 className="text-lg font-bold text-[#4b164c]">Our Makeup Services</h3>
-                <ul className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
-                  {glamServices.map((service) => (
-                    <li
-                      key={service}
-                      className="flex items-center gap-2 rounded-2xl border border-[#4b164c]/10 bg-white/70 px-4 py-3 text-sm font-semibold text-[#4b164c]"
-                    >
-                      <Check className="h-4 w-4 shrink-0 text-[#bc5eff]" />
-                      {service}
-                    </li>
-                  ))}
-                </ul>
+              <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_1.2fr]">
+                {/* Services */}
+                <div className="glass-strong rounded-3xl p-6 shadow-[0_20px_60px_rgba(75,22,76,0.10)] sm:p-8">
+                  <h3 className="text-lg font-bold text-[#4b164c]">Our Makeup Services</h3>
+                  <ul className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                    {glamServices.map((service) => (
+                      <li
+                        key={service}
+                        className="flex items-center gap-2 rounded-2xl border border-[#4b164c]/10 bg-white/70 px-4 py-3 text-sm font-semibold text-[#4b164c]"
+                      >
+                        <Check className="h-4 w-4 shrink-0 text-[#bc5eff]" />
+                        {service}
+                      </li>
+                    ))}
+                  </ul>
 
-                <div className="mt-6 space-y-2">
-                  {glamAudience.map((line) => (
-                    <p key={line} className="text-sm leading-relaxed text-[#4b164c]/70">
-                      {line}
+                  <div className="mt-6 space-y-2">
+                    {glamAudience.map((line) => (
+                      <p key={line} className="text-sm leading-relaxed text-[#4b164c]/70">
+                        {line}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Contact card */}
+                <div className="flex flex-col justify-between rounded-3xl bg-[#4b164c] p-6 text-white shadow-[0_24px_80px_rgba(75,22,76,0.18)] sm:p-8">
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#bc5eff]">
+                      Get in touch
                     </p>
-                  ))}
+                    <h3 className="mt-3 text-2xl font-bold leading-tight md:text-3xl">
+                      Book Jen Glam <span className="font-serif italic">Makeover</span> for your day
+                    </h3>
+                    <p className="mt-3 text-sm text-white/70">
+                      Reach out directly on Instagram or call to check availability for
+                      your wedding, reception, or event.
+                    </p>
+                  </div>
+
+                  <div className="mt-8 flex flex-col gap-3">
+                    <a
+                      href="https://instagram.com/jen_glam_makeover_tuty"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-3 rounded-2xl border border-white/20 bg-white/10 px-4 py-3 text-sm font-bold transition-all hover:bg-white/20"
+                    >
+                      <FaInstagram className="h-4 w-4 shrink-0 text-[#bc5eff]" />
+                      Jen Glam Makeover Tuty
+                    </a>
+                    <a
+                      href="tel:7448518536"
+                      className="inline-flex items-center gap-3 rounded-2xl border border-white/20 bg-white/10 px-4 py-3 text-sm font-bold transition-all hover:bg-white/20"
+                    >
+                      <Phone className="h-4 w-4 shrink-0 text-[#bc5eff]" />
+                      +91 74485 18536
+                    </a>
+                  </div>
                 </div>
               </div>
-
-              {/* Contact card */}
-              <div className="flex flex-col justify-between rounded-3xl bg-[#4b164c] p-6 text-white shadow-[0_24px_80px_rgba(75,22,76,0.18)] sm:p-8">
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#bc5eff]">
-                    Get in touch
-                  </p>
-                  <h3 className="mt-3 text-2xl font-bold leading-tight md:text-3xl">
-                    Book Jen Glam{" "}
-                    <span className="font-serif italic">Makeover</span> for your day
-                  </h3>
-                  <p className="mt-3 text-sm text-white/70">
-                    Reach out directly on Instagram or call to check availability for
-                    your wedding, reception, or event.
-                  </p>
-                </div>
-
-                <div className="mt-8 flex flex-col gap-3">
-                  <a
-                    href="https://instagram.com/jen_glam_makeover_tuty"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 rounded-2xl border border-white/20 bg-white/10 px-4 py-3 text-sm font-bold transition-all hover:bg-white/20"
-                  >
-                    <FaInstagram className="h-4 w-4 shrink-0 text-[#bc5eff]" />
-                    Jen Glam Makeover Tuty
-                  </a>
-                  <a
-                    href="tel:7448518536"
-                    className="inline-flex items-center gap-3 rounded-2xl border border-white/20 bg-white/10 px-4 py-3 text-sm font-bold transition-all hover:bg-white/20"
-                  >
-                    <Phone className="h-4 w-4 shrink-0 text-[#bc5eff]" />
-                    +91 74485 18536
-                  </a>
-                </div>
-              </div>
-            </div>
-          </section>
+            </section>
+          </div>
         </AnimatedReveal>
 
         {/* Packages */}
