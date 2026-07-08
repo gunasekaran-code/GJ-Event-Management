@@ -1,14 +1,18 @@
 // app/api/booking/route.ts
 
 import { NextRequest, NextResponse } from "next/server";
-import { Resend } from "resend";
-
-
 
 export async function POST(req: NextRequest) {
-
-    const resend = new Resend(process.env.RESEND_API_KEY);
     try {
+        const apiKey = process.env.RESEND_API_KEY;
+
+        if (!apiKey) {
+            return NextResponse.json(
+                { error: "Email service is not configured." },
+                { status: 500 }
+            );
+        }
+
         const body = await req.json();
         const {
             fullName,
@@ -31,11 +35,17 @@ export async function POST(req: NextRequest) {
             );
         }
 
-        await resend.emails.send({
-            from: "GJ Decoration <onboarding@resend.dev>",
-            to: "gunasekaran.code@gmail.com",
-            subject: `New Booking Request – ${fullName} | ${eventType || "Event"}`,
-            html: `
+        const emailRes = await fetch("https://api.resend.com/emails", {
+            method: "POST",
+            headers: {
+                Authorization: `Bearer ${apiKey}`,
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                from: "GJ Decoration <onboarding@resend.dev>",
+                to: "gunasekaran.code@gmail.com",
+                subject: `New Booking Request – ${fullName} | ${eventType || "Event"}`,
+                html: `
                 <div style="font-family: sans-serif; max-width: 620px; margin: auto; padding: 32px; background: #f8e7f6; border-radius: 16px;">
                     <h2 style="color: #4b164c; margin-bottom: 4px;">New Booking Request</h2>
                     <p style="color: #bc5eff; font-size: 12px; font-weight: bold; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0;">GJ Decoration & Event Management</p>
@@ -120,7 +130,17 @@ export async function POST(req: NextRequest) {
                     <p style="color: #4b164c99; font-size: 11px; text-align: center; margin: 0;">Sent via GJ Decoration booking form</p>
                 </div>
             `,
+            }),
         });
+
+        if (!emailRes.ok) {
+            const details = await emailRes.text();
+            console.error("Resend booking email error:", details);
+            return NextResponse.json(
+                { error: "Failed to send booking email." },
+                { status: 502 }
+            );
+        }
 
         return NextResponse.json({ success: true }, { status: 200 });
 

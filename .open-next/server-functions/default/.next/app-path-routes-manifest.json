@@ -1,0 +1,12 @@
+{
+  "/Booking/page": "/Booking",
+  "/Contact/page": "/Contact",
+  "/Makeover/page": "/Makeover",
+  "/Pricing/page": "/Pricing",
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/api/booking/route": "/api/booking",
+  "/api/contact/route": "/api/contact",
+  "/favicon.ico/route": "/favicon.ico",
+  "/page": "/"
+}
