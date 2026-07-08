@@ -17,16 +17,17 @@ export default function MehandiPage() {
     <>
       <Header />
       <main className="overflow-x-hidden bg-[#f5f5f5] pt-15 md:pt-15">
+        
         {/* Hero */}
         <AnimatedReveal>
-          <section className="relative overflow-hidden bg-[#f8e7f6] py-10 md:py-16">
+          <section className="relative flex min-h-screen items-center overflow-hidden bg-[#f8e7f6] py-10 md:py-16">
             <div className="relative mx-auto max-w-7xl px-5 md:px-6">
               <div className="mb-7 flex flex-wrap gap-3">
                 <Link
                   href="/#home"
                   className="inline-flex items-center gap-2 rounded-full border border-[#4b164c]/10 bg-white/80 px-4 py-2 text-sm font-bold text-[#4b164c] shadow-[0_10px_30px_rgba(75,22,76,0.08)] transition-all hover:border-[#bc5eff]/50 hover:text-[#bc5eff] hover:shadow-[0_14px_36px_rgba(188,94,255,0.16)]"
                 >
-                  <ArrowLeft className="h-4 w-4" />
+                  <ArrowLeft className="h-4 w-3" />
                   Back to home
                 </Link>
               </div>

@@ -24,9 +24,9 @@ export const mehandiPackages = [
 
 export const heroStats = [
   { value: "45 min", label: "AVG. SESSION TIME" },
-  { value: "500+", label: "5-STAR REVIEWS" },
-  { value: "₹300", label: "STARTING PRICE" },
-  { value: "6 yrs", label: "IN BUSINESS" },
+  { value: "500+", label:   "5-STAR REVIEWS" },
+  { value: "₹300", label:   "STARTING PRICE" },
+  { value: "6 yrs", label:  "IN BUSINESS" },
 ];
 
 export const glamServices = [

@@ -36,6 +36,7 @@ export type PricingItem = {
   name: string;
   price: string;
   priceNote: string;
+  image: string;
   description: string;
   features: string[];
 };
@@ -58,6 +59,7 @@ export const pricingCategories: PricingCategory[] = [
         name: "Wedding",
         price: "₹1,25,000",
         priceNote: "Starting from",
+        image: "/images/wedding.jpg",
         description:
           "Complete mandap decor, floral arrangements, stage setup, and traditional Tamil wedding styling.",
         features: ["Mandap & stage decor", "Fresh floral arrangements", "Entrance & aisle styling", "On-day coordination"],
@@ -67,6 +69,7 @@ export const pricingCategories: PricingCategory[] = [
         name: "Engagement",
         price: "₹45,000",
         priceNote: "Starting from",
+        image: "/images/engagement.jpg",
         description:
           "Elegant engagement setup with floral backdrops, seating, and kolam-inspired floor design.",
         features: ["Stage backdrop", "Floral arch", "Seating arrangement", "Traditional accents"],
@@ -76,6 +79,7 @@ export const pricingCategories: PricingCategory[] = [
         name: "Birthday",
         price: "₹25,000",
         priceNote: "Starting from",
+        image: "/images/birthday.jpg",
         description:
           "Themed birthday decor with balloon arches, stage design, and custom photo backdrops.",
         features: ["Theme setup", "Balloon decor", "Stage & backdrop", "Table styling"],
@@ -85,6 +89,7 @@ export const pricingCategories: PricingCategory[] = [
         name: "Puberty Ceremony",
         price: "₹35,000",
         priceNote: "Starting from",
+        image: "/images/puberty-ceremony.jpg",
         description:
           "Manjal Neerattu Vizha decor with traditional floral backdrops and majestic seating.",
         features: ["Traditional backdrop", "Floral garlands", "Seating setup", "Cultural styling"],
@@ -94,6 +99,7 @@ export const pricingCategories: PricingCategory[] = [
         name: "Baby Shower",
         price: "₹30,000",
         priceNote: "Starting from",
+        image: "/images/baby-shower.jpg",
         description:
           "Seemantham & Valakaappu decor with marigold strings, brass urli, and elegant layouts.",
         features: ["Traditional backdrop", "Marigold strings", "Brass urli decor", "Seating layout"],
@@ -103,6 +109,7 @@ export const pricingCategories: PricingCategory[] = [
         name: "Holy Communion",
         price: "₹40,000",
         priceNote: "Starting from",
+        image: "/images/holy-communion.jpg",
         description:
           "Church ceremony decor with reverent floral arrangements and stage styling.",
         features: ["Altar & stage decor", "Floral arrangements", "Seating setup", "Procession styling"],
@@ -112,6 +119,7 @@ export const pricingCategories: PricingCategory[] = [
         name: "Name Revealing",
         price: "₹28,000",
         priceNote: "Starting from",
+        image: "/images/name-revealing.jpg",
         description:
           "Beautiful name reveal setup with themed backdrops, balloons, and family photo zones.",
         features: ["Reveal backdrop", "Balloon decor", "Photo zone", "Table styling"],
@@ -128,6 +136,7 @@ export const pricingCategories: PricingCategory[] = [
         name: "Photography",
         price: "₹15,000",
         priceNote: "Starting from",
+        image: "/images/photography.jpg",
         description:
           "Professional event photography covering ceremonies, candid moments, and family portraits.",
         features: ["Full event coverage", "Edited digital album", "Candid & posed shots", "Same-day highlights"],
@@ -137,6 +146,7 @@ export const pricingCategories: PricingCategory[] = [
         name: "Lighting",
         price: "₹20,000",
         priceNote: "Starting from",
+        image: "/images/lighting.jpg",
         description:
           "Stage LED lighting, ambient mood lights, and professional light design for your venue.",
         features: ["Stage LED setup", "Ambient lighting", "Colour wash effects", "Light operator"],
@@ -146,6 +156,7 @@ export const pricingCategories: PricingCategory[] = [
         name: "DJ Events",
         price: "₹18,000",
         priceNote: "Starting from",
+        image: "/images/dj-events.jpg",
         description:
           "DJ setup with sound system, music coordination, and dance floor lighting.",
         features: ["DJ & sound system", "Wireless mics", "Dance floor lights", "Music coordination"],
@@ -162,6 +173,7 @@ export const pricingCategories: PricingCategory[] = [
         name: "Arabian Tent",
         price: "₹35,000",
         priceNote: "Starting from",
+        image: "/images/arabian-tent.jpg",
         description:
           "Premium Arabian tent setup with draping, flooring, and elegant interior styling.",
         features: ["Tent structure", "Draping & flooring", "Interior lighting", "Entry styling"],
@@ -171,6 +183,7 @@ export const pricingCategories: PricingCategory[] = [
         name: "Panthal",
         price: "₹55,000",
         priceNote: "Starting from",
+        image: "/images/panthal.jpg",
         description:
           "Traditional panthal structure with banana leaves, flowers, and pillar decor.",
         features: ["Panthal structure", "Banana leaf styling", "Pillar decor", "Floral accents"],
@@ -180,6 +193,7 @@ export const pricingCategories: PricingCategory[] = [
         name: "Chair",
         price: "₹8,000",
         priceNote: "Starting from",
+        image: "/images/chair.jpg",
         description:
           "Premium chair rental with covers, sashes, and coordinated seating layout.",
         features: ["Chair rental", "Covers & sashes", "Layout planning", "Setup & removal"],
@@ -189,6 +203,7 @@ export const pricingCategories: PricingCategory[] = [
         name: "Speaker",
         price: "₹12,000",
         priceNote: "Starting from",
+        image: "/images/speaker.jpg",
         description:
           "Professional speaker and PA system for announcements, music, and ceremonies.",
         features: ["PA system", "Wireless mics", "Sound operator", "Backup equipment"],
