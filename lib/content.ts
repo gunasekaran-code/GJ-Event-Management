@@ -59,7 +59,7 @@ export const pricingCategories: PricingCategory[] = [
         name: "Wedding",
         price: "₹1,25,000",
         priceNote: "Starting from",
-        image: "/images/wedding.jpg",
+        image: "/images/wedding.webp",
         description:
           "Complete mandap decor, floral arrangements, stage setup, and traditional Tamil wedding styling.",
         features: ["Mandap & stage decor", "Fresh floral arrangements", "Entrance & aisle styling", "On-day coordination"],
@@ -69,7 +69,7 @@ export const pricingCategories: PricingCategory[] = [
         name: "Engagement",
         price: "₹45,000",
         priceNote: "Starting from",
-        image: "/images/engagement.jpg",
+        image: "/images/engagement.webp",
         description:
           "Elegant engagement setup with floral backdrops, seating, and kolam-inspired floor design.",
         features: ["Stage backdrop", "Floral arch", "Seating arrangement", "Traditional accents"],
@@ -89,7 +89,7 @@ export const pricingCategories: PricingCategory[] = [
         name: "Puberty Ceremony",
         price: "₹35,000",
         priceNote: "Starting from",
-        image: "/images/puberty-ceremony.jpg",
+        image: "/images/puberty-ceremony.webp",
         description:
           "Manjal Neerattu Vizha decor with traditional floral backdrops and majestic seating.",
         features: ["Traditional backdrop", "Floral garlands", "Seating setup", "Cultural styling"],
@@ -99,7 +99,7 @@ export const pricingCategories: PricingCategory[] = [
         name: "Baby Shower",
         price: "₹30,000",
         priceNote: "Starting from",
-        image: "/images/baby-shower.jpg",
+        image: "/images/baby-shower.webp",
         description:
           "Seemantham & Valakaappu decor with marigold strings, brass urli, and elegant layouts.",
         features: ["Traditional backdrop", "Marigold strings", "Brass urli decor", "Seating layout"],
@@ -109,7 +109,7 @@ export const pricingCategories: PricingCategory[] = [
         name: "Holy Communion",
         price: "₹40,000",
         priceNote: "Starting from",
-        image: "/images/holy-communion.jpg",
+        image: "/images/holy-communion.webp",
         description:
           "Church ceremony decor with reverent floral arrangements and stage styling.",
         features: ["Altar & stage decor", "Floral arrangements", "Seating setup", "Procession styling"],
@@ -119,7 +119,7 @@ export const pricingCategories: PricingCategory[] = [
         name: "Name Revealing",
         price: "₹28,000",
         priceNote: "Starting from",
-        image: "/images/name-revealing.jpg",
+        image: "/images/name-revealing.webp",
         description:
           "Beautiful name reveal setup with themed backdrops, balloons, and family photo zones.",
         features: ["Reveal backdrop", "Balloon decor", "Photo zone", "Table styling"],
@@ -173,7 +173,7 @@ export const pricingCategories: PricingCategory[] = [
         name: "Arabian Tent",
         price: "₹35,000",
         priceNote: "Starting from",
-        image: "/images/arabian-tent.jpg",
+        image: "/images/arabian-tent.webp",
         description:
           "Premium Arabian tent setup with draping, flooring, and elegant interior styling.",
         features: ["Tent structure", "Draping & flooring", "Interior lighting", "Entry styling"],
