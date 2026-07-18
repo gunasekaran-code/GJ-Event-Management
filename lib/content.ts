@@ -79,7 +79,7 @@ export const pricingCategories: PricingCategory[] = [
         name: "Birthday",
         price: "₹25,000",
         priceNote: "Starting from",
-        image: "/images/birthday.jpg",
+        image: "https://i.pinimg.com/1200x/a9/71/3b/a9713b71176a7f1750617a5a4cf7291e.jpg",
         description:
           "Themed birthday decor with balloon arches, stage design, and custom photo backdrops.",
         features: ["Theme setup", "Balloon decor", "Stage & backdrop", "Table styling"],
@@ -136,7 +136,7 @@ export const pricingCategories: PricingCategory[] = [
         name: "Photography",
         price: "₹15,000",
         priceNote: "Starting from",
-        image: "/images/photography.jpg",
+        image: "https://i.pinimg.com/736x/9a/e9/08/9ae908972372612aa81cda8b5665f0ff.jpg",
         description:
           "Professional event photography covering ceremonies, candid moments, and family portraits.",
         features: ["Full event coverage", "Edited digital album", "Candid & posed shots", "Same-day highlights"],
@@ -146,7 +146,7 @@ export const pricingCategories: PricingCategory[] = [
         name: "Lighting",
         price: "₹20,000",
         priceNote: "Starting from",
-        image: "/images/lighting.jpg",
+        image: "https://i.pinimg.com/736x/7e/4e/5a/7e4e5ad3b7a51a6b687ee4307929cea4.jpg",
         description:
           "Stage LED lighting, ambient mood lights, and professional light design for your venue.",
         features: ["Stage LED setup", "Ambient lighting", "Colour wash effects", "Light operator"],
@@ -156,7 +156,7 @@ export const pricingCategories: PricingCategory[] = [
         name: "DJ Events",
         price: "₹18,000",
         priceNote: "Starting from",
-        image: "/images/dj-events.jpg",
+        image: "https://i.pinimg.com/736x/b6/a8/33/b6a8336395117fda1d1c7102a31bf0fb.jpg",
         description:
           "DJ setup with sound system, music coordination, and dance floor lighting.",
         features: ["DJ & sound system", "Wireless mics", "Dance floor lights", "Music coordination"],
@@ -183,7 +183,7 @@ export const pricingCategories: PricingCategory[] = [
         name: "Panthal",
         price: "₹55,000",
         priceNote: "Starting from",
-        image: "/images/panthal.jpg",
+        image: "https://i.pinimg.com/1200x/9f/86/dd/9f86dd665d53d79808250101b47f93ed.jpg",
         description:
           "Traditional panthal structure with banana leaves, flowers, and pillar decor.",
         features: ["Panthal structure", "Banana leaf styling", "Pillar decor", "Floral accents"],
@@ -193,7 +193,7 @@ export const pricingCategories: PricingCategory[] = [
         name: "Chair",
         price: "₹8,000",
         priceNote: "Starting from",
-        image: "/images/chair.jpg",
+        image: "https://i.pinimg.com/736x/ac/9b/5d/ac9b5d9b406cfb5eddb43ee2be10f143.jpg",
         description:
           "Premium chair rental with covers, sashes, and coordinated seating layout.",
         features: ["Chair rental", "Covers & sashes", "Layout planning", "Setup & removal"],
@@ -203,7 +203,7 @@ export const pricingCategories: PricingCategory[] = [
         name: "Speaker",
         price: "₹12,000",
         priceNote: "Starting from",
-        image: "/images/speaker.jpg",
+        image: "https://i.pinimg.com/736x/b9/34/9f/b9349f1450cb47baee2039d97cc0d0df.jpg",
         description:
           "Professional speaker and PA system for announcements, music, and ceremonies.",
         features: ["PA system", "Wireless mics", "Sound operator", "Backup equipment"],
