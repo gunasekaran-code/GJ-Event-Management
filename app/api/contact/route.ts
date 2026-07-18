@@ -20,7 +20,8 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
         await resend.emails.send({
             from: "GJ Decoration <onboarding@resend.dev>",
-            to: "gunasekaran.code@gmail.com",
+            // to: "gunasekaran.code@gmail.com",
+            to: "jebastin396@gmail.com",
             subject: `New Enquiry from ${name} – ${eventType || "General"}`,
             html: `
                 <div style="font-family: sans-serif; max-width: 600px; margin: auto; padding: 32px; background: #f8e7f6; border-radius: 16px;">

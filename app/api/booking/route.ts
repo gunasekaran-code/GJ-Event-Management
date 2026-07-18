@@ -43,7 +43,8 @@ export async function POST(req: NextRequest) {
             },
             body: JSON.stringify({
                 from: "GJ Decoration <onboarding@resend.dev>",
-                to: "gunasekaran.code@gmail.com",
+                // to: "gunasekaran.code@gmail.com",
+                to: "jebastin396@gmail.com",
                 subject: `New Booking Request – ${fullName} | ${eventType || "Event"}`,
                 html: `
                 <div style="font-family: sans-serif; max-width: 620px; margin: auto; padding: 32px; background: #f8e7f6; border-radius: 16px;">

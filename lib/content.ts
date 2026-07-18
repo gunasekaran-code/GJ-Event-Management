@@ -7,7 +7,7 @@ export const siteConfig = {
   phoneDisplay: "63805 84448",
   email: "info@gjdecoration.in",
   instagram: "https://www.instagram.com/gj_decoration_event/",
-  whatsapp: "https://wa.me/919876543210",
+  whatsapp: "https://wa.me/916380584448", //
   address: {
     street: "Thoothukudi",
     city: "Thoothukudi",
