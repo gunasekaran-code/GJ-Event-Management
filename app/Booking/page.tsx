@@ -703,7 +703,7 @@ function BookingForm() {
       type="tel"
       required
       className={fieldBase}
-      placeholder="+91 98765 43210"
+      placeholder="+91 63805 84448"
     />
   </label>
 
