@@ -9,19 +9,19 @@ import { useState, useEffect } from "react";
 
 const heroSlides = [
   {
-    src: "https://images.unsplash.com/photo-1587271636175-90d58cdad458?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "/image/image24.jpg",
     alt: "Traditional wedding mandap decoration in Thoothukudi",
   },
   {
-    src: "https://images.unsplash.com/photo-1633443682042-17462ad4ad76?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "/image/image11.jpg",
     alt: "Reception flower decoration by GJ Events Thoothukudi",
   },
   {
-    src: "https://images.unsplash.com/photo-1756190564669-215843660e93?q=80&w=1946&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "/image/image12.jpg",
     alt: "Outdoor event decoration Thoothukudi Tamil Nadu",
   },
   {
-    src: "https://images.unsplash.com/photo-1595436805731-10652dcd9de8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "/image/image8.jpg",
     alt: "Sangeet stage setup Tamil Nadu event management",
   },
 

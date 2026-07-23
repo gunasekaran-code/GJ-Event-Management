@@ -219,7 +219,7 @@ export const services = [
     description:
       "Traditional Tamil wedding mandap designs with fresh flowers, banana leaves, and elegant lighting — crafted for Thoothukudi and across Tamil Nadu.",
     image:
-      "https://images.unsplash.com/photo-1587271407850-8d438ca9fdf2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "/image/image20.jpg",
     imageAlt: "Traditional wedding mandap decoration in Thoothukudi Tamil Nadu",
   },
   {
@@ -228,7 +228,7 @@ export const services = [
     description:
       "Grand reception stage setups, floral arches, and themed backdrops that blend Tamil heritage with contemporary elegance.",
     image:
-      "https://images.unsplash.com/photo-1587271636175-90d58cdad458?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "/image/image24.jpg",
     imageAlt: "Wedding reception stage decoration Thoothukudi",
   },
   {
@@ -246,7 +246,7 @@ export const services = [
     description:
       "Grand Manjal Neerattu Vizha celebrations featuring traditional floral backdrops, majestic seating setups, and elegant styling to honor family milestones with cultural perfection.",
     image:
-      "https://i.pinimg.com/736x/c6/b9/22/c6b92208599ed52822e155640801e3c7.jpg",
+      "/image/image1.jpg",
     imageAlt: "Traditional Manjal Neerattu Vizha puberty ceremony decoration Thoothukudi",
   },
   {
@@ -278,7 +278,7 @@ export const portfolio = [
     description:
       "A stunning floral mandap with banana leaf accents and gold-draped pillars for a 500-guest wedding in Thoothukudi.",
     image:
-      "https://i.pinimg.com/1200x/ab/af/b0/abafb0025c6e0b9eff9b6c991cf0d243.jpg",
+      "/image/image9.jpg",
     imageAlt: "Traditional Tamil wedding mandap Thoothukudi",
   },
   {
@@ -288,7 +288,7 @@ export const portfolio = [
     description:
       "A magical fairytale birthday celebration featuring custom balloon arches, grand stage lighting, and interactive photo backdrops tailored for an unforgettable family milestone.",
     image:
-      "https://i.pinimg.com/736x/21/31/22/2131226275f003ab90a815c2d31f7606.jpg",
+      "/image/image8.jpg",
     imageAlt: "Enchanted garden theme birthday party stage decoration Madurai",
   },
   {
@@ -298,7 +298,7 @@ export const portfolio = [
     description:
       "Elegant traditional layout featuring vibrant marigold strings, brass urli elements, and a beautifully crafted traditional backdrop for a memorable family celebration.",
     image:
-      "https://i.pinimg.com/736x/07/38/63/073863b8aa4906bf47ac52839ef0b5a6.jpg",
+      "/image/image25.jpg",
     imageAlt: "Traditional South Indian baby shower seemantham decoration Thoothukudi",
   },
   {
@@ -308,7 +308,7 @@ export const portfolio = [
     description:
       "Elegant engagement setup with traditional kolam-inspired floor design and pastel floral arrangements.",
     image:
-      "https://i.pinimg.com/736x/92/44/25/924425822e8bc386b821af4593184b45.jpg",
+      "/image/image13.jpg",
     imageAlt: "Engagement ceremony decoration Thoothukudi",
   },
   {
@@ -318,7 +318,7 @@ export const portfolio = [
     description:
       "Luxurious reception stage with cascading florals and ambient lighting for a Chennai wedding celebration.",
     image:
-      "https://i.pinimg.com/736x/27/f9/43/27f94347be1eb66eb3bb9ccf1c137f51.jpg",
+      "/image/image16.jpg",
     imageAlt: "Wedding reception stage Chennai Tamil Nadu",
   },
   {
@@ -328,7 +328,7 @@ export const portfolio = [
     description:
       "Stage production and cultural event decor for a government-sponsored district-level programme in Thoothukudi.",
     image:
-      "https://i.pinimg.com/736x/b1/2c/1d/b12c1d66b563380607ec4fda58970e05.jpg",
+      "/image/image15.jpg",
     imageAlt: "Government cultural event Thoothukudi Tamil Nadu",
   },
 
@@ -345,7 +345,7 @@ export const stats = [
     description:
       "From intimate family gatherings to grand weddings — every event executed with precision and care.",
     image:
-      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "/image/image21.jpg",
     imageAlt: "Events delivered across Tamil Nadu",
   },
   {
@@ -355,7 +355,7 @@ export const stats = [
     description:
       "Serving Thoothukudi, Tirunelveli, Madurai, Chennai, and towns across Tamil Nadu and beyond.",
     image:
-      "https://images.unsplash.com/photo-1723832348105-2e69f948135a?q=80&w=1012&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "/image/image12.jpg",
     imageAlt: "Event management cities Tamil Nadu",
   },
   {
@@ -375,7 +375,7 @@ export const stats = [
     description:
       "Professional corporate event production for businesses across South Tamil Nadu.",
     image:
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80",
+      "/image/image17.jpg",
     imageAlt: "Corporate events Thoothukudi",
   },
   {
@@ -385,7 +385,7 @@ export const stats = [
     description:
       "Families who trust GJ Decoration to turn their most important moments into lasting memories.",
     image:
-      "https://i.pinimg.com/736x/ae/b8/e4/aeb8e4bd9cb88ea3df3bcf88eab2c572.jpg",
+      "/image/image22.jpg",
     imageAlt: "Happy families event management Thoothukudi",
   },
 ];
@@ -520,7 +520,7 @@ export const blogPosts = [
     excerpt:
       "A guide to traditional Tamil mandap styles, floral choices, and budgeting for your Thoothukudi wedding.",
     image:
-      "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80",
+      "/image/image9.jpg",
     imageAlt: "Wedding mandap guide Thoothukudi",
   },
   {
@@ -530,7 +530,7 @@ export const blogPosts = [
     excerpt:
       "How to plan a successful corporate event — from venue selection to stage design and AV production.",
     image:
-      "https://images.unsplash.com/photo-1651065699638-a50bf6e63bc3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "/image/image11.jpg",
     imageAlt: "Corporate event planning Tamil Nadu",
   },
   {
@@ -540,7 +540,7 @@ export const blogPosts = [
     excerpt:
       "Blending authentic church festival traditions with contemporary design for unforgettable celebrations.",
     image:
-      "https://i.pinimg.com/736x/bb/80/7a/bb807a448bf329999ff3813a1c543bd8.jpg",
+      "/image/image24.jpg",
     imageAlt: "Church festival decoration Tamil Nadu",
   },
 ];
