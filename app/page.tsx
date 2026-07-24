@@ -7,6 +7,7 @@ import { Portfolio } from "@/components/sections/Portfolio";
 import { BehindTheScenes } from "@/components/sections/BehindTheScenes";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { VideoCTA } from "@/components/sections/VideoCTA";
+import {Founders} from "@/components/sections/Founders";
 import { Reach } from "@/components/sections/Reach";
 import { OurTeam } from "@/components/sections/OurTeam";
 import { Reach1 } from "@/components/sections/Reach1";
@@ -26,6 +27,7 @@ export default function Home() {
         <BehindTheScenes />
         <Testimonials />
         <VideoCTA/>
+        <Founders/>
         <Reach />
         <OurTeam />
         <Reach1 />
